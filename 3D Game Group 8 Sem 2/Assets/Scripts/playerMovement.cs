@@ -2,8 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-
-public class playerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
 
     [SerializeField]private float speed = 10f;
@@ -22,6 +21,7 @@ public class playerMovement : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        
     }
 
     // Update is called once per frame
@@ -45,5 +45,6 @@ public class playerMovement : MonoBehaviour
         movement.y= yvelocity;
 
         characterController.Move(movement * Time.deltaTime);
+        
     }
 }
