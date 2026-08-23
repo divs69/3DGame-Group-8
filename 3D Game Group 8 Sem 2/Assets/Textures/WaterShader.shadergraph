@@ -40,6 +40,9 @@
         },
         {
             "m_Id": "cd5e434228ff42529e5e76b329c18b6b"
+        },
+        {
+            "m_Id": "26eae701af6345d0b8f266effddf73ae"
         }
     ],
     "m_GroupDatas": [],
@@ -88,6 +91,9 @@
             },
             {
                 "m_Id": "cd5e434228ff42529e5e76b329c18b6b"
+            },
+            {
+                "m_Id": "26eae701af6345d0b8f266effddf73ae"
             }
         ]
     },
@@ -116,7 +122,7 @@
     "m_SGVersion": 2,
     "m_Type": "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
     "m_ObjectId": "017d7aab16774a849e4fff8883eadc82",
-    "m_WorkflowMode": 1,
+    "m_WorkflowMode": 0,
     "m_NormalDropOffSpace": 0,
     "m_ClearCoat": false,
     "m_BlendModePreserveSpecular": true
@@ -240,6 +246,40 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
+    "m_ObjectId": "26eae701af6345d0b8f266effddf73ae",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "SurfaceDescription.Specular",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "c8852a67d8dd477d894bf1ca3c689075"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedDescriptor": "SurfaceDescription.Specular"
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "2e1a319a920844deb4b81cc2aef561ff",
     "m_Id": 0,
@@ -248,7 +288,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Metallic",
     "m_StageCapability": 2,
-    "m_Value": 0.3199999928474426,
+    "m_Value": 1.8700000047683716,
     "m_DefaultValue": 0.0,
     "m_Labels": [],
     "m_LiteralMode": false
@@ -406,7 +446,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Smoothness",
     "m_StageCapability": 2,
-    "m_Value": 2.809999942779541,
+    "m_Value": 7.170000076293945,
     "m_DefaultValue": 0.5,
     "m_Labels": [],
     "m_LiteralMode": false
@@ -663,9 +703,9 @@
     "m_ShaderOutputName": "Emission",
     "m_StageCapability": 2,
     "m_Value": {
-        "x": 0.10000000149011612,
-        "y": 0.10000000149011612,
-        "z": 0.10000000149011612
+        "x": 0.10537554323673248,
+        "y": 0.2819032371044159,
+        "z": 0.30188679695129397
     },
     "m_DefaultValue": {
         "x": 0.0,
@@ -678,6 +718,36 @@
         "r": 0.0,
         "g": 0.0,
         "b": 0.0,
+        "a": 1.0
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.ColorRGBMaterialSlot",
+    "m_ObjectId": "c8852a67d8dd477d894bf1ca3c689075",
+    "m_Id": 0,
+    "m_DisplayName": "Specular Color",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Specular",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.4678017795085907,
+        "y": 0.6669949293136597,
+        "z": 0.6855344772338867
+    },
+    "m_DefaultValue": {
+        "x": 0.5,
+        "y": 0.5,
+        "z": 0.5
+    },
+    "m_Labels": [],
+    "m_ColorMode": 0,
+    "m_DefaultColor": {
+        "r": 0.5,
+        "g": 0.5,
+        "b": 0.5,
         "a": 1.0
     }
 }

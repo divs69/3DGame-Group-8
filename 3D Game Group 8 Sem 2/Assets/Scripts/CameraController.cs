@@ -7,6 +7,8 @@ public class CameraController : MonoBehaviour
 
     [SerializeField] private Transform player;
     [SerializeField] private float mouseSensitivity = 100f;
+    
+    private CameraController cameraController;  
 
     private float xRotation;
 
@@ -14,6 +16,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        cameraController = GetComponent<CameraController>();
     }
 
     // Update is called once per frame
