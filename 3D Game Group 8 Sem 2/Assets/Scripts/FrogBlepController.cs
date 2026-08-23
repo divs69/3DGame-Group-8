@@ -12,7 +12,7 @@ public class FrogBlepController : MonoBehaviour
 
     [Header("Visual Components")]
     [SerializeField] private LineRenderer tongueLine;
-    [SerializeField] private Transform mouthOrigin; //childed to camera and place slightly below camera
+    [SerializeField] private Transform mouthOrigin; // Childed to camera and placed slightly below camera
 
     private bool isBlepping = false;
     private HoverHighlight currentHighlightedItem;
@@ -56,28 +56,54 @@ public class FrogBlepController : MonoBehaviour
 
     private IEnumerator PerformBlep()
     {
+        // Safety guard against missing Inspector references
+        if (tongueLine == null || mouthOrigin == null)
+        {
+            Debug.LogError("FrogBlepController: Missing 'tongueLine' or 'mouthOrigin' reference in the Inspector!");
+            yield break;
+        }
+
         isBlepping = true;
+
+        // Turn off hover highlight on the item while tongue is actively firing
+        if (currentHighlightedItem != null)
+        {
+            currentHighlightedItem.SetHighlight(false);
+            currentHighlightedItem = null;
+        }
+
         tongueLine.enabled = true;
 
         Vector3 startPosition = mouthOrigin.position;
         Vector3 targetPosition = transform.position + (transform.forward * maxReachDistance);
         Transform grabbedItem = null;
 
+        // Perform raycast to check for grab target
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, maxReachDistance, collectableLayer))
         {
             targetPosition = hit.point;
+            Debug.Log("Raycast Hit: " + hit.collider.gameObject.name);
 
             if (hit.collider.TryGetComponent<ICollectable>(out _))
             {
+                Debug.Log("Successfully found ICollectable interface!");
                 grabbedItem = hit.transform;
             }
+            else
+            {
+                Debug.LogWarning("Hit object on Collectable layer, but it is MISSING the ICollectable interface!");
+            }
+        }
+        else
+        {
+            Debug.Log("Raycast missed - firing tongue outward into air.");
         }
 
-        // Phase 1: Tongue Extends
+        // --- Phase 1: Tongue Extends ---
         float progress = 0f;
         Vector3 currentTipPos = startPosition;
 
-        while (progress <1f)
+        while (progress < 1f)
         {
             progress += Time.deltaTime * extendSpeed;
             currentTipPos = Vector3.Lerp(startPosition, targetPosition, progress);
@@ -87,7 +113,7 @@ public class FrogBlepController : MonoBehaviour
             yield return null;
         }
 
-        //Phase 2: Attach Object to Tongue
+        // --- Phase 2: Attach Object to Tongue ---
         if (grabbedItem != null)
         {
             if (grabbedItem.TryGetComponent<Rigidbody>(out Rigidbody rb))
@@ -97,7 +123,7 @@ public class FrogBlepController : MonoBehaviour
             grabbedItem.SetParent(mouthOrigin);
         }
 
-        //Phase 3: Tongue Retracts
+        // --- Phase 3: Tongue Retracts ---
         progress = 0f;
         Vector3 reachPoint = currentTipPos;
 
@@ -116,8 +142,8 @@ public class FrogBlepController : MonoBehaviour
             yield return null;
         }
 
-        //Phase 4: Item Gets Placed into Inventory
-        if (grabbedItem !=null)
+        // --- Phase 4: Deposit Item into Inventory ---
+        if (grabbedItem != null)
         {
             if (grabbedItem.TryGetComponent<ICollectable>(out ICollectable item))
             {
