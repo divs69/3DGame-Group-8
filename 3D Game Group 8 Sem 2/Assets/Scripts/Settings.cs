@@ -13,6 +13,7 @@ public class Settings : MonoBehaviour
 
     void Start()
     {
+        
         SettingsPanel.SetActive(false);
         ResumeButton.onClick.AddListener(HideSettingsPanel);
         SettingsButton.onClick.AddListener(DisplaySettingsPanel);

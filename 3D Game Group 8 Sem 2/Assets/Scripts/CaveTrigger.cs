@@ -15,7 +15,7 @@ public class CaveTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Cave");
+            SceneManager.LoadScene("CaveScene");
         }
     }
     

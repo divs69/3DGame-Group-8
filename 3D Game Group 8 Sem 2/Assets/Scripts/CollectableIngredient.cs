@@ -12,8 +12,8 @@ public class CollectableIngredient : MonoBehaviour, ICollectable
     public void OnCollected()
     {
         Debug.Log($"Collected: {data.itemName} via Blep!");
-        inventorymanager.AddItem(gameObject.name);
-
+        inventorymanager.AddItem(data.itemName);
+        Debug.Log($"HAS ITEM AFTER ADD: {inventorymanager.HasItem(data.itemName)}");
         Destroy(gameObject);
 
     }

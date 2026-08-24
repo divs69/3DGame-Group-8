@@ -5344,6 +5344,188 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &155716201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 155716202}
+  - component: {fileID: 155716205}
+  - component: {fileID: 155716204}
+  - component: {fileID: 155716203}
+  m_Layer: 5
+  m_Name: bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &155716202
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155716201}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1226788218}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &155716203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155716201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a301a72c07bf2428354a5e4c680521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SlotsCauldron
+  requireditemName: Bone
+  slotimage: {fileID: 0}
+  isfilled: 0
+--- !u!114 &155716204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155716201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &155716205
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155716201}
+  m_CullTransparentMesh: 1
+--- !u!1 &161803199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 161803200}
+  - component: {fileID: 161803202}
+  - component: {fileID: 161803201}
+  - component: {fileID: 161803203}
+  m_Layer: 5
+  m_Name: InventPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &161803200
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161803199}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1352210663}
+  m_Father: {fileID: 1042718666}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -9, y: -649.167}
+  m_SizeDelta: {x: -1490.6975, y: -1298.3341}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &161803201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161803199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &161803202
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161803199}
+  m_CullTransparentMesh: 1
+--- !u!114 &161803203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161803199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 027310e39c54bb749a61ac6bc96c2a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewUIInventory
+  inventorymanager: {fileID: 1115347871}
+  MushroomTwoImage: {fileID: 1352210662}
 --- !u!1 &162640599
 GameObject:
   m_ObjectHideFlags: 0
@@ -5716,6 +5898,97 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0069522844, y: 1.4356594, z: 0.7366488}
   m_Center: {x: -0.2540243, y: 0.38204387, z: -0.09618081}
+--- !u!1 &187299079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 187299080}
+  - component: {fileID: 187299083}
+  - component: {fileID: 187299082}
+  - component: {fileID: 187299081}
+  m_Layer: 5
+  m_Name: crystal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &187299080
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187299079}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1226788218}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &187299081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187299079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a301a72c07bf2428354a5e4c680521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SlotsCauldron
+  requireditemName: Crystal
+  slotimage: {fileID: 0}
+  isfilled: 0
+--- !u!114 &187299082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187299079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &187299083
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187299079}
+  m_CullTransparentMesh: 1
 --- !u!1 &203587440 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3623688769583556096, guid: 2087eabb76d90e248b0c84de52aa2db9, type: 3}
@@ -10302,7 +10575,7 @@ PrefabInstance:
       addedObject: {fileID: 382917461}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 382917460}
+      addedObject: {fileID: 382917464}
   m_SourcePrefab: {fileID: 100100000, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
 --- !u!4 &382917458 stripped
 Transform:
@@ -10314,20 +10587,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
   m_PrefabInstance: {fileID: 382917457}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &382917460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 382917459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cbdbabd644086c4a955123c4a75e559, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
-  data: {fileID: 11400000, guid: ba57dbbd5d627f246930095c39cf5f1a, type: 2}
-  inventorymanager: {fileID: 1115347871}
 --- !u!65 &382917461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10343,12 +10602,25 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 4.8700128, y: 8.122223, z: 4.8700128}
   m_Center: {x: 0, y: 4.0610714, z: 0}
+--- !u!114 &382917464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382917459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f4e06ed721c344582421836a7ab73a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewCollectableItem
+  itemName: MushroomTwo
 --- !u!1001 &424948358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10426,7 +10698,7 @@ PrefabInstance:
       addedObject: {fileID: 424948362}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 424948361}
+      addedObject: {fileID: 424948365}
   m_SourcePrefab: {fileID: 100100000, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
 --- !u!4 &424948359 stripped
 Transform:
@@ -10438,20 +10710,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
   m_PrefabInstance: {fileID: 424948358}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &424948361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424948360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cbdbabd644086c4a955123c4a75e559, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
-  data: {fileID: 11400000, guid: ba57dbbd5d627f246930095c39cf5f1a, type: 2}
-  inventorymanager: {fileID: 1115347871}
 --- !u!65 &424948362
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10467,12 +10725,25 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 4.8700128, y: 8.122223, z: 4.8700128}
   m_Center: {x: 0, y: 4.0610714, z: 0}
+--- !u!114 &424948365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424948360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f4e06ed721c344582421836a7ab73a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewCollectableItem
+  itemName: MushroomTwo
 --- !u!1 &428785474
 GameObject:
   m_ObjectHideFlags: 0
@@ -14850,7 +15121,7 @@ PrefabInstance:
       addedObject: {fileID: 526418548}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 526418547}
+      addedObject: {fileID: 526418551}
   m_SourcePrefab: {fileID: 100100000, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
 --- !u!4 &526418545 stripped
 Transform:
@@ -14862,20 +15133,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
   m_PrefabInstance: {fileID: 526418544}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &526418547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526418546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cbdbabd644086c4a955123c4a75e559, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
-  data: {fileID: 11400000, guid: ba57dbbd5d627f246930095c39cf5f1a, type: 2}
-  inventorymanager: {fileID: 1115347871}
 --- !u!65 &526418548
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14891,12 +15148,25 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 4.8700128, y: 8.122223, z: 4.8700128}
   m_Center: {x: 0, y: 4.0610714, z: 0}
+--- !u!114 &526418551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526418546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f4e06ed721c344582421836a7ab73a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewCollectableItem
+  itemName: MushroomTwo
 --- !u!1 &531785821
 GameObject:
   m_ObjectHideFlags: 0
@@ -27941,6 +28211,92 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &845189185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 845189188}
+  - component: {fileID: 845189187}
+  - component: {fileID: 845189186}
+  - component: {fileID: 845189189}
+  m_Layer: 5
+  m_Name: MushroomTwo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &845189186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845189185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 6bc87d96b19428f4b8d6309092462343, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &845189187
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845189185}
+  m_CullTransparentMesh: 1
+--- !u!224 &845189188
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845189185}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1352210663}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -465, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &845189189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845189185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b864fdaba6d6ed4595b2072546c8a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactimages
+  itemName: MushroomTwo
 --- !u!1 &855381782
 GameObject:
   m_ObjectHideFlags: 0
@@ -28937,27 +29293,13 @@ PrefabInstance:
       addedObject: {fileID: 880499402}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 880499401}
+      addedObject: {fileID: 880499408}
   m_SourcePrefab: {fileID: 100100000, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
 --- !u!1 &880499400 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
   m_PrefabInstance: {fileID: 880499399}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &880499401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 880499400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cbdbabd644086c4a955123c4a75e559, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
-  data: {fileID: 11400000, guid: ba57dbbd5d627f246930095c39cf5f1a, type: 2}
-  inventorymanager: {fileID: 1115347871}
 --- !u!65 &880499402
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28973,7 +29315,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -28984,6 +29326,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
   m_PrefabInstance: {fileID: 880499399}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &880499408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880499400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f4e06ed721c344582421836a7ab73a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewCollectableItem
+  itemName: MushroomTwo
 --- !u!1 &882531489
 GameObject:
   m_ObjectHideFlags: 0
@@ -36787,7 +37142,7 @@ PrefabInstance:
       addedObject: {fileID: 974417812}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 974417811}
+      addedObject: {fileID: 974417815}
   m_SourcePrefab: {fileID: 100100000, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
 --- !u!4 &974417809 stripped
 Transform:
@@ -36799,20 +37154,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
   m_PrefabInstance: {fileID: 974417808}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &974417811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974417810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cbdbabd644086c4a955123c4a75e559, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
-  data: {fileID: 11400000, guid: ba57dbbd5d627f246930095c39cf5f1a, type: 2}
-  inventorymanager: {fileID: 1115347871}
 --- !u!65 &974417812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36828,12 +37169,25 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.8700128, y: 8.122223, z: 4.8700128}
-  m_Center: {x: 0, y: 4.0610714, z: 0}
+  m_Size: {x: 16.197739, y: 8.122223, z: 17.645924}
+  m_Center: {x: 0.17929748, y: 4.0610714, z: 0.76419264}
+--- !u!114 &974417815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974417810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f4e06ed721c344582421836a7ab73a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewCollectableItem
+  itemName: MushroomTwo
 --- !u!1 &984749050
 GameObject:
   m_ObjectHideFlags: 0
@@ -38658,6 +39012,7 @@ RectTransform:
   - {fileID: 457599072}
   - {fileID: 1226788218}
   - {fileID: 428785475}
+  - {fileID: 161803200}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -41834,6 +42189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1115347870}
+  - component: {fileID: 1115347872}
   - component: {fileID: 1115347871}
   m_Layer: 0
   m_Name: Inventory Manager
@@ -41866,9 +42222,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1115347869}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dbb79950056dda4b8cbf4eaabb987a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 9df1fe86a3eb05f4eac5a730650e9e1e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  m_EditorClassIdentifier: Assembly-CSharp::NewInventoryManager
+--- !u!114 &1115347872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115347869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 027310e39c54bb749a61ac6bc96c2a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewUIInventory
+  inventorymanager: {fileID: 1115347871}
+  MushroomTwoImage: {fileID: 1352210662}
 --- !u!43 &1133338868
 Mesh:
   m_ObjectHideFlags: 0
@@ -45416,13 +45786,14 @@ GameObject:
   - component: {fileID: 1226788218}
   - component: {fileID: 1226788220}
   - component: {fileID: 1226788219}
+  - component: {fileID: 1226788221}
   m_Layer: 5
   m_Name: CauldronPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1226788218
 RectTransform:
   m_ObjectHideFlags: 0
@@ -45434,13 +45805,17 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1277577113}
+  - {fileID: 155716202}
+  - {fileID: 187299080}
+  - {fileID: 2110474231}
   m_Father: {fileID: 1042718666}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -8, y: 32}
+  m_SizeDelta: {x: -1337.3118, y: -694.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1226788219
 MonoBehaviour:
@@ -45480,6 +45855,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226788217}
   m_CullTransparentMesh: 1
+--- !u!114 &1226788221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226788217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97b01e5e0db2664c93d175fde0d7600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CauldronManager
+  slots:
+  - {fileID: 1277577114}
+  - {fileID: 155716203}
+  - {fileID: 187299081}
+  resultimage: {fileID: 2110474232}
+  resultsprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!43 &1238227902
 Mesh:
   m_ObjectHideFlags: 0
@@ -46159,6 +46552,97 @@ Transform:
   - {fileID: 593343155}
   m_Father: {fileID: 742731509}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1277577112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1277577113}
+  - component: {fileID: 1277577116}
+  - component: {fileID: 1277577115}
+  - component: {fileID: 1277577114}
+  m_Layer: 5
+  m_Name: mushroom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1277577113
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277577112}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1226788218}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1277577114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277577112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a301a72c07bf2428354a5e4c680521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SlotsCauldron
+  requireditemName: MushroomTwo
+  slotimage: {fileID: 0}
+  isfilled: 0
+--- !u!114 &1277577115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277577112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1277577116
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277577112}
+  m_CullTransparentMesh: 1
 --- !u!43 &1297319746
 Mesh:
   m_ObjectHideFlags: 0
@@ -49520,6 +50004,42 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &1352210662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1352210663}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1352210663
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352210662}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 845189188}
+  m_Father: {fileID: 161803200}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1352668862
 GameObject:
   m_ObjectHideFlags: 0
@@ -76391,7 +76911,7 @@ PrefabInstance:
       addedObject: {fileID: 1796721250}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1796721249}
+      addedObject: {fileID: 1796721253}
   m_SourcePrefab: {fileID: 100100000, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
 --- !u!4 &1796721247 stripped
 Transform:
@@ -76403,20 +76923,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
   m_PrefabInstance: {fileID: 1796721246}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1796721249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1796721248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cbdbabd644086c4a955123c4a75e559, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
-  data: {fileID: 11400000, guid: ba57dbbd5d627f246930095c39cf5f1a, type: 2}
-  inventorymanager: {fileID: 1115347871}
 --- !u!65 &1796721250
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -76432,12 +76938,25 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 4.8700128, y: 8.122223, z: 4.8700128}
   m_Center: {x: 0, y: 4.0610714, z: 0}
+--- !u!114 &1796721253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796721248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f4e06ed721c344582421836a7ab73a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewCollectableItem
+  itemName: MushroomTwo
 --- !u!1 &1810702271
 GameObject:
   m_ObjectHideFlags: 0
@@ -84532,6 +85051,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095093064}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2110474230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2110474231}
+  - component: {fileID: 2110474233}
+  - component: {fileID: 2110474232}
+  m_Layer: 5
+  m_Name: Potion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2110474231
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110474230}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1226788218}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2110474232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110474230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2110474233
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110474230}
+  m_CullTransparentMesh: 1
 --- !u!1 &2121901391
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,20 +7,21 @@ public class UI_CollectImages : MonoBehaviour
     public InventoryManager inventorymanager;
 
     [Header("Collectables Images")]
-    [SerializeField] private RawImage[] CollectableImages;
+    [SerializeField] private RawImage[] CollectableImage;
     [SerializeField] private string[] itemNames;
 
     void Update()
     {
-        for (int i = 0; i < CollectableImages.Length; i++)
+        for (int i = 0; i < CollectableImage.Length; i++)
         {
-            UpdateInventoryImage(CollectableImages[i], itemNames[i]);
+            UpdateCollectableImage(CollectableImage[i], itemNames[i]);
         }
     }
 
-    private void UpdateInventoryImage(RawImage InventoryImage, string itemName)
+    private void UpdateCollectableImage(RawImage CollectableImage, string itemName)
     {
-        bool hasItem = inventorymanager.HasItem(itemName);
-        InventoryImage.enabled = hasItem;
+        bool HasItem = inventorymanager.HasItem(itemName);
+        Debug.Log($"UI CHECK: {itemName} = {HasItem}");
+        CollectableImage.enabled = (HasItem);
     }
 }
