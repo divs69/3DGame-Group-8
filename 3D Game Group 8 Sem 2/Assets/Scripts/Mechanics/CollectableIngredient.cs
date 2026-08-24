@@ -5,7 +5,7 @@ public class CollectableIngredient : MonoBehaviour, ICollectable
     [Header("Item Data Link")]
     [SerializeField] private IngredientData data;
 
-    public InventoryManager inventorymanager;
+    public NewInventoryManager inventorymanager;
 
     public IngredientData Data => data;
 

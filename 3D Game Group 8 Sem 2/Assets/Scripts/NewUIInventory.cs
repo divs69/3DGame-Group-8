@@ -8,6 +8,10 @@ public class NewUIInventory : MonoBehaviour
     public NewInventoryManager inventorymanager;
     [Header("Inventory Images")]
     public GameObject MushroomTwoImage;
+    [Header("Inventory Images")]
+    public GameObject CrystalImage;
+    [Header("Inventory Images")]
+    public GameObject BoneImage;
 
     private void Start()
     {
@@ -31,6 +35,8 @@ public class NewUIInventory : MonoBehaviour
         }
 
         MushroomTwoImage.gameObject.SetActive(inventorymanager.HasItem("MushroomTwo"));
+        CrystalImage.gameObject.SetActive(inventorymanager.HasItem("crystal"));
+        BoneImage.gameObject.SetActive(inventorymanager.HasItem("Bone"));
     }
 
 

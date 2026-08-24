@@ -13,6 +13,8 @@ public class playerMovement : MonoBehaviour
 
     [SerializeField] private float jumpforce = 10f;
 
+    
+
     private CharacterController characterController;
 
     float yvelocity;
@@ -28,10 +30,13 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         Vector3 movement = (transform.right*horizontal+transform.forward*vertical).normalized;
         movement*=speed;
+
+        
 
         if (characterController.isGrounded &&  yvelocity < 1)
         {
