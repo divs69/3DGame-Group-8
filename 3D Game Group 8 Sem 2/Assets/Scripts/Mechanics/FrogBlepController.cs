@@ -5,12 +5,13 @@ using UnityEngine;
 public class FrogBlepController : MonoBehaviour
 {
     [Header("Blep Settings")]
-    [SerializeField] private float maxReachDistance = 10f;
+    public float maxReachDistance = 10f;
     [SerializeField] private float extendSpeed = 25f;
     [SerializeField] private float retractSpeed = 30f;
-    [SerializeField] private LayerMask collectableLayer;
+    public LayerMask collectableLayer;
 
     [Header("Visual Components")]
+    [SerializeField] private Camera playerCamera;
     [SerializeField] private LineRenderer tongueLine;
     [SerializeField] private Transform mouthOrigin; // Childed to camera and placed slightly below camera
 
@@ -19,6 +20,9 @@ public class FrogBlepController : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.instance != null && GameManager.instance.IsPaused)
+            return;
+
         CheckForAimHighlight();
 
         if (Input.GetKeyDown(KeyCode.E) && !isBlepping)
@@ -29,8 +33,10 @@ public class FrogBlepController : MonoBehaviour
 
     private void CheckForAimHighlight()
     {
-        // Raycast straight out from camera center
-        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, maxReachDistance, collectableLayer))
+        // Generate ray where crosshair is
+        Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+
+        if (Physics.Raycast(ray, out RaycastHit hit, maxReachDistance, collectableLayer))
         {
             if (hit.collider.TryGetComponent<HoverHighlight>(out HoverHighlight highlightScript))
             {
