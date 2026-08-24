@@ -10327,7 +10327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
   data: {fileID: 11400000, guid: ba57dbbd5d627f246930095c39cf5f1a, type: 2}
-  inventorymanager: {fileID: 0}
+  inventorymanager: {fileID: 1115347871}
 --- !u!65 &382917461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10451,7 +10451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
   data: {fileID: 11400000, guid: ba57dbbd5d627f246930095c39cf5f1a, type: 2}
-  inventorymanager: {fileID: 0}
+  inventorymanager: {fileID: 1115347871}
 --- !u!65 &424948362
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10501,18 +10501,18 @@ RectTransform:
   m_GameObject: {fileID: 428785474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2415427, y: 1.2415427, z: 1.2415427}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2036004699}
   - {fileID: 1759552405}
   - {fileID: 754219337}
-  m_Father: {fileID: 457599072}
+  m_Father: {fileID: 1042718666}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1415.3588, y: -706.43787}
-  m_SizeDelta: {x: 1150.071, y: 703.0502}
+  m_AnchoredPosition: {x: -1, y: 46.99994}
+  m_SizeDelta: {x: -1249.929, y: -635.078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &428785476
 MonoBehaviour:
@@ -11922,8 +11922,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.80544955, y: 0.80544955, z: 0.80544955}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 428785475}
+  m_Children: []
   m_Father: {fileID: 1042718666}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -11953,8 +11952,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.6785727, g: 0.91823894, b: 0.8114124, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -14836,7 +14835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
       propertyPath: m_Name
-      value: MushroomTwo  (4)
+      value: 'MushroomTwo  '
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
       propertyPath: m_Layer
@@ -14876,7 +14875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
   data: {fileID: 11400000, guid: ba57dbbd5d627f246930095c39cf5f1a, type: 2}
-  inventorymanager: {fileID: 0}
+  inventorymanager: {fileID: 1115347871}
 --- !u!65 &526418548
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28958,7 +28957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
   data: {fileID: 11400000, guid: ba57dbbd5d627f246930095c39cf5f1a, type: 2}
-  inventorymanager: {fileID: 0}
+  inventorymanager: {fileID: 1115347871}
 --- !u!65 &880499402
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36813,7 +36812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
   data: {fileID: 11400000, guid: ba57dbbd5d627f246930095c39cf5f1a, type: 2}
-  inventorymanager: {fileID: 0}
+  inventorymanager: {fileID: 1115347871}
 --- !u!65 &974417812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38658,6 +38657,7 @@ RectTransform:
   m_Children:
   - {fileID: 457599072}
   - {fileID: 1226788218}
+  - {fileID: 428785475}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -41834,6 +41834,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1115347870}
+  - component: {fileID: 1115347871}
   m_Layer: 0
   m_Name: Inventory Manager
   m_TagString: Untagged
@@ -41856,6 +41857,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1115347871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115347869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dbb79950056dda4b8cbf4eaabb987a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
 --- !u!43 &1133338868
 Mesh:
   m_ObjectHideFlags: 0
@@ -76403,7 +76416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
   data: {fileID: 11400000, guid: ba57dbbd5d627f246930095c39cf5f1a, type: 2}
-  inventorymanager: {fileID: 0}
+  inventorymanager: {fileID: 1115347871}
 --- !u!65 &1796721250
 BoxCollider:
   m_ObjectHideFlags: 0
