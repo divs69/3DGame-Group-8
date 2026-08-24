@@ -18,6 +18,14 @@ public class NewUIInventory : MonoBehaviour
         MushroomTwoImage.gameObject.SetActive(false);
 
         UpdateInventoryUI();
+
+        CrystalImage.gameObject.SetActive(false);
+
+        UpdateInventoryUI();
+
+        BoneImage.gameObject.SetActive(false);
+
+        UpdateInventoryUI();
     }
 
     private void Update()

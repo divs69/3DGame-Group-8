@@ -86929,8 +86929,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewUIInventory
   inventorymanager: {fileID: 416303617}
   MushroomTwoImage: {fileID: 214992906}
-  CrystalImage: {fileID: 0}
-  BoneImage: {fileID: 142432122}
+  CrystalImage: {fileID: 1253649920}
+  BoneImage: {fileID: 651353236}
 --- !u!1001 &7789822965689750852
 PrefabInstance:
   m_ObjectHideFlags: 0
