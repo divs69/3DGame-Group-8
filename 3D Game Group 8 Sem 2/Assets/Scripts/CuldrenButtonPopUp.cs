@@ -21,11 +21,12 @@ public class CuldrenButtonPopup : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //object entering is plaayer check
-        if (other.CompareTag(targetTag))
+        if (other.CompareTag("targetTag"))
         {
             if (uiButton != null)
             {
               uiButton.SetActive(true);
+                Debug.Log("Button is showing up");
             }
         }     
     }
@@ -35,7 +36,7 @@ public class CuldrenButtonPopup : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         //Hide button after
-        if (other.CompareTag(targetTag))
+        if (other.CompareTag("targetTag"))
         {
           if (uiButton !=null)
             {

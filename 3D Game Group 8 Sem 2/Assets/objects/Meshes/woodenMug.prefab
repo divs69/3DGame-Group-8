@@ -51,7 +51,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 053a7576067ac4a44a68b207c4442ccd, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 712c98e1e070f1540ae4c14715ff6f70, type: 2}
+      objectReference: {fileID: 2100000, guid: 1db993ef310a6eb47a82c88d51d8f2e0, type: 2}
     - target: {fileID: 919132149155446097, guid: 053a7576067ac4a44a68b207c4442ccd, type: 3}
       propertyPath: m_Name
       value: woodenMug

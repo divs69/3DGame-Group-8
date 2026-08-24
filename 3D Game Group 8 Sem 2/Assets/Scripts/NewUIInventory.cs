@@ -35,7 +35,7 @@ public class NewUIInventory : MonoBehaviour
         }
 
         MushroomTwoImage.gameObject.SetActive(inventorymanager.HasItem("MushroomTwo"));
-        CrystalImage.gameObject.SetActive(inventorymanager.HasItem("crystal"));
+        CrystalImage.gameObject.SetActive(inventorymanager.HasItem("Crystal"));
         BoneImage.gameObject.SetActive(inventorymanager.HasItem("Bone"));
     }
 
