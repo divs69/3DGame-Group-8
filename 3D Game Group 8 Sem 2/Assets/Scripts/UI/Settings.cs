@@ -63,7 +63,7 @@ public class Settings : MonoBehaviour
         Cursor.visible = true;
     }
 
-    private void QuitGame()
+    public void QuitGame()
     {
         Time.timeScale = 1f;
         Debug.Log("Game Quit");
