@@ -15,7 +15,7 @@ public class ForestTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("NewLevelOne");
+            SceneManager.LoadScene("LevelOne");
         }
     }
 
