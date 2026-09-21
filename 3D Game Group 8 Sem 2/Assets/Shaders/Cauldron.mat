@@ -20,27 +20,41 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_NewWaterShader
+  m_Name: Cauldron
   m_Shader: {fileID: -6465566751694194690, guid: 711a301418564e347851c06b4ef83a01, type: 3}
-  m_Parent: {fileID: 2100000, guid: bac33508d33268c4594e867967a4583e, type: 2}
+  m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _QueueControl: 0
+    - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 0, g: 0.3420527, b: 0.6745098, a: 1}
-    - _Ripplecolour: {r: 0.7496641, g: 0.6626913, b: 0.9622642, a: 1}
+    - _Color: {r: 2.5048034, g: 36.30093, b: 1.0273786, a: 1}
+    - _Ripplecolour: {r: 0.4210115, g: 0, b: 12.073034, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
