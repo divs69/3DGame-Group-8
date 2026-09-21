@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.27720404, g: 0.42056122, b: 1.2075472, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: fe133d7f010eefc46acaaae6cbaef84e, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: a8cc15b6d56219a4e9e82d03197c5bb1, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 295094210}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: b9a12a2d5a03ffc4587a7be4a7dd2ebd, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -38444,7 +38444,7 @@ Terrain:
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: 15445fc07ea5a4249b73e1a74822b292, type: 2}
   m_TreeDistance: 5000
-  m_TreeBillboardDistance: 50
+  m_TreeBillboardDistance: 690
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
@@ -86690,7 +86690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 788801960116934011, guid: 83b08d1c80d23ac4ab921f971e2955de, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1566835548323708661, guid: 83b08d1c80d23ac4ab921f971e2955de, type: 3}
       propertyPath: m_SizeDelta.y
@@ -86856,9 +86856,13 @@ PrefabInstance:
       propertyPath: m_Text
       value: Make potions -Q near cauldron
       objectReference: {fileID: 0}
+    - target: {fileID: 8853852663912325276, guid: 83b08d1c80d23ac4ab921f971e2955de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8871784714806428211, guid: 83b08d1c80d23ac4ab921f971e2955de, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8968932169799181401, guid: 83b08d1c80d23ac4ab921f971e2955de, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
