@@ -27,7 +27,7 @@
                 {
                     "name": "Jump",
                     "type": "Value",
-                    "id": "6abd31c1-b404-4a3d-96b5-ea27bdb3a361",
+                    "id": "eee9597e-8db9-47f4-b74a-899a3aa35c34",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -180,8 +180,19 @@
                 },
                 {
                     "name": "",
-                    "id": "2ded049c-a2c9-45e1-bddf-a13b6c1ac189",
+                    "id": "a46126dd-1dba-456d-8ad2-f75e616d4370",
                     "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2c75d825-ccb8-486d-9159-101faa57cc8f",
+                    "path": "<Gamepad>/leftStick/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
