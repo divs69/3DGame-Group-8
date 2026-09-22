@@ -43,7 +43,7 @@ Material:
     - _botomline: 0.38
     - _metallic: 1
     - _smoothness: 1
-    - _topline: 0.66
+    - _topline: 0.71
     m_Colors:
     - _base_colour: {r: 18.164822, g: 1.4952223, b: 0.7608306, a: 1}
     - _bottomcolour: {r: 0.15094331, g: 0.23168643, b: 0.9056604, a: 1}
