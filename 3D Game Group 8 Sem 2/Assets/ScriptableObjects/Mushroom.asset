@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c9985698d32c44895dded89c5850d2, type: 3}
   m_Name: Mushroom
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
-  itemName: 
-  itemIcon: {fileID: 0}
+  itemName: Mus
+  itemIcon: {fileID: 951763403, guid: 6bc87d96b19428f4b8d6309092462343, type: 3}
   description: 
+  itemPrefab: {fileID: 0}
   maxStackSize: 50
+  handItemPrefab: {fileID: 0}

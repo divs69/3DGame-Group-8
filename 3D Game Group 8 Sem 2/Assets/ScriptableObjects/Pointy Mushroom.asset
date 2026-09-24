@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Pointy Mushroom
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   itemName: Pointy Mushroom
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 951763403, guid: 6bc87d96b19428f4b8d6309092462343, type: 3}
   description: This is a poisonous mushroom used for invisibility potions.
+  itemPrefab: {fileID: 0}
   maxStackSize: 50
+  handItemPrefab: {fileID: 0}
