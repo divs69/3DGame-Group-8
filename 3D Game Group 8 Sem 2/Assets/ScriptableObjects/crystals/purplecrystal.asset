@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3c9985698d32c44895dded89c5850d2, type: 3}
-  m_Name: CaveCrystals
+  m_Name: purplecrystal
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
-  itemName: CaveCrystals
+  itemName: purple crystal
   itemIcon: {fileID: 999080818, guid: baf4676bfbd335a44818bdc7dba12706, type: 3}
-  description: crystalllll
+  description: its a crysal
+  itemPrefab: {fileID: 4688858738268670841, guid: 84297cd25acebb742b8c30ad5337a794, type: 3}
   maxStackSize: 50
+  handItemPrefab: {fileID: 0}

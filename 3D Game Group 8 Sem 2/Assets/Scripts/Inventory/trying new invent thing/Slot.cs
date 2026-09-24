@@ -42,6 +42,13 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void UpdateSlot()
     {
+
+        if (iconImage == null)
+        {
+            iconImage = transform.GetChild(0).GetComponent<Image>();
+            amountTxt = transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+        }
+
         if (helditem != null)
         {
             iconImage.enabled = true;

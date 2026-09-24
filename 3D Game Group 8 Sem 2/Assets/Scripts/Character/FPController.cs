@@ -16,16 +16,23 @@ public class FPController : MonoBehaviour
     private Vector2 lookInput;
     private Vector3 velocity;
     private float verticalRotation = 0f;
+
+
+    
     private void Awake()
     {
+        
+
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
     private void Update()
     {
+        
         HandleMovement();
         HandleLook();
+        
     }
     public void OnMove(InputAction.CallbackContext context)
     {
