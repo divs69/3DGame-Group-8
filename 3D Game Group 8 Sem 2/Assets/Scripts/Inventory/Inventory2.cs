@@ -8,17 +8,22 @@ using UnityEngine.UI;
 
 public class Inventory2 : MonoBehaviour
 {
+    //objects in game world. collectables 
     public IngredientData MushroomItem;
     public IngredientData CrystalItem;
     public IngredientData BeehiveItem;
     public IngredientData FlowerItem;
     public IngredientData Flower1Item;
+    public IngredientData HoneyCombItem;
+
+    //Slot Containers
     public GameObject hotbarObj;
     public GameObject inventorySlotParent;
     public GameObject container;
 
     public Image dragIcon;
 
+    //PickUp
     public float pickupRange;
     private Ingredients lookedAtItem = null;
     public Material highlightMaterial;
@@ -31,12 +36,19 @@ public class Inventory2 : MonoBehaviour
     private int equippedHotBarIndex = 0; //0 - 5 numpad keys in the hotbar
     public float equippedOpacity = 0.9f;
     public float normalOpacity = 0.58f;
-
+    
+    //Item Descriptions
     public GameObject itemdescriptionParent;
     public Image itemdescriptionimage;
     public TextMeshProUGUI descriptionitemNameTxt;
     public TextMeshProUGUI itemdescriptionTxt;
 
+    //crafting 
+    public List<Recipes> allRecipes = new List<Recipes>();
+    public Transform craftingGrid;
+    public GameObject craftingBTNprefab;
+
+    //slot lists
     private List<Slot> inventorySlots = new List<Slot>();
     private List<Slot> hotbarSlots = new List<Slot>();
     private List<Slot> allSlots = new List<Slot>();
@@ -48,6 +60,8 @@ public class Inventory2 : MonoBehaviour
 
         allSlots.AddRange(inventorySlots);
         allSlots.AddRange(hotbarSlots);
+
+        PopulateCraftingGrid();
     }
     void Update()
     {
@@ -80,7 +94,7 @@ public class Inventory2 : MonoBehaviour
     {
         int remaining = amount;
 
-
+        //try to fill existing stacks first
         foreach (Slot slot in allSlots)
         {
             if (slot.HasItem() && slot.GetItem() == itemToAdd)
@@ -97,12 +111,16 @@ public class Inventory2 : MonoBehaviour
                     remaining -= amountToAdd;
 
                     if (remaining <= 0)
-                        return;
+                    {
+                        PopulateCraftingGrid();
+                        return; // done adding everything
+                    }
+                    
                 }
             }
         }
 
-
+        //if items remian,put them in empty slots 
         foreach (Slot slot in allSlots)
         {
             if (!slot.HasItem())
@@ -112,7 +130,8 @@ public class Inventory2 : MonoBehaviour
                 remaining -= amountToPlace;
 
                 if (remaining <= 0)
-                    return;
+                    PopulateCraftingGrid();
+                return; // done adding everything
             }
         }
 
@@ -120,6 +139,7 @@ public class Inventory2 : MonoBehaviour
         {
             Debug.Log("inventory is full, could not add item" + remaining + "of" + itemToAdd.itemName);
         }
+        PopulateCraftingGrid();
     }
 
     private void StartDrag()
@@ -298,13 +318,16 @@ public class Inventory2 : MonoBehaviour
 
         if (prefab == null) return;
 
+        //spawn
         GameObject dropped = Instantiate(prefab, Camera.main.transform.position + Camera.main.transform.forward, Quaternion.identity);
 
         Ingredients ingredient = dropped.GetComponent<Ingredients>();
         ingredient.ingredient = ingredientData;
         ingredient.amount = equippedSlot.GetAmount();
 
-        equippedSlot.ClearSlot();
+        equippedSlot.ClearSlot(); // remove
+
+        PopulateCraftingGrid();
     }
 
     private void UpdateItemDescription()
@@ -325,5 +348,60 @@ public class Inventory2 : MonoBehaviour
             }
             itemdescriptionParent.SetActive(false);
         }
+    }
+
+    private void PopulateCraftingGrid()
+    {
+        for (int i = craftingGrid.childCount - 1; i >= 0; i--)
+        {
+            Destroy(craftingGrid.GetChild(i).gameObject);
+        }
+
+        foreach(Recipes recipes in allRecipes)
+        {
+            GameObject btnObj = Instantiate(craftingBTNprefab, craftingGrid);
+
+            Image img = btnObj.transform.GetChild(0).GetComponent<Image>();
+            img.sprite = recipes.result.itemIcon;
+
+            Button btn = btnObj.GetComponent<Button>();
+
+            btn.interactable = CanCraft(recipes);
+            btn.onClick.RemoveAllListeners();
+            btn.onClick.AddListener(() => Craft(recipes));
+        }
+    }
+
+    public void Craft(Recipes recipes)
+    {
+        if (!CanCraft(recipes))
+        {
+            return;
+        }
+
+        PopulateCraftingGrid();
+    }
+
+    public bool CanCraft(Recipes recipes)
+    {
+        foreach (Element element in recipes.elements)
+        {
+            int totalFound = 0;
+
+            foreach (Slot slot in allSlots)
+            {
+                if(slot.HasItem() && slot.GetItem() == element.ingredient)
+                {
+                    totalFound += slot.GetAmount();
+
+                }
+            }
+
+            if(totalFound < element.amount)
+                return false;
+
+        }
+        return true;
+
     }
 }
