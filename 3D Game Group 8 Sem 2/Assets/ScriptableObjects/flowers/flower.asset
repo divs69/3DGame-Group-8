@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: 
   itemIcon: {fileID: 0}
   description: 
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 9011048691255490585, guid: 0848ba806c9447648bcb6e053c4d17b9, type: 3}
   maxStackSize: 50
   handItemPrefab: {fileID: 0}

@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: Mus
   itemIcon: {fileID: 951763403, guid: 6bc87d96b19428f4b8d6309092462343, type: 3}
   description: 
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 5565406460826220209, guid: 02f0845fb4ac7f147bbbd636949f2a80, type: 3}
   maxStackSize: 50
   handItemPrefab: {fileID: 0}

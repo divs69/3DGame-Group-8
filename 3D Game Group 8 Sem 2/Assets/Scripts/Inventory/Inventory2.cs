@@ -8,17 +8,25 @@ using UnityEngine.UI;
 
 public class Inventory2 : MonoBehaviour
 {
+    public static Inventory2 instance;
+
+    //objects in game world. collectables 
     public IngredientData MushroomItem;
     public IngredientData CrystalItem;
     public IngredientData BeehiveItem;
     public IngredientData FlowerItem;
     public IngredientData Flower1Item;
+    
+
+    //Slot Containers
     public GameObject hotbarObj;
     public GameObject inventorySlotParent;
     public GameObject container;
+    public GameObject craftingMenu;
 
     public Image dragIcon;
 
+    //PickUp
     public float pickupRange;
     private Ingredients lookedAtItem = null;
     public Material highlightMaterial;
@@ -31,12 +39,20 @@ public class Inventory2 : MonoBehaviour
     private int equippedHotBarIndex = 0; //0 - 5 numpad keys in the hotbar
     public float equippedOpacity = 0.9f;
     public float normalOpacity = 0.58f;
-
+    
+    //Item Descriptions
     public GameObject itemdescriptionParent;
     public Image itemdescriptionimage;
     public TextMeshProUGUI descriptionitemNameTxt;
     public TextMeshProUGUI itemdescriptionTxt;
 
+    //crafting 
+    public List<Recipes> allRecipes = new List<Recipes>();
+    public Transform craftingGrid;
+    public GameObject craftingBTNprefab;
+    public GameObject itemneededUIprefab;
+
+    //slot lists
     private List<Slot> inventorySlots = new List<Slot>();
     private List<Slot> hotbarSlots = new List<Slot>();
     private List<Slot> allSlots = new List<Slot>();
@@ -48,17 +64,17 @@ public class Inventory2 : MonoBehaviour
 
         allSlots.AddRange(inventorySlots);
         allSlots.AddRange(hotbarSlots);
+
+        PopulateCraftingGrid();
     }
     void Update()
     {
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            container.SetActive(!container.activeInHierarchy);
-            Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
-            Cursor.visible = !Cursor.visible;
 
-            
+            ToggleInventory();
+
         }
 
         DetectLookedAtItem();
@@ -76,11 +92,20 @@ public class Inventory2 : MonoBehaviour
         UpdateItemDescription();
     }
 
+    public void ToggleInventory()
+    {
+        container.SetActive(!container.activeInHierarchy);
+        Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = !Cursor.visible;
+
+        craftingMenu.SetActive(true);
+    }
+
     public void Additem(IngredientData itemToAdd, int amount)
     {
         int remaining = amount;
 
-
+        //try to fill existing stacks first
         foreach (Slot slot in allSlots)
         {
             if (slot.HasItem() && slot.GetItem() == itemToAdd)
@@ -97,12 +122,16 @@ public class Inventory2 : MonoBehaviour
                     remaining -= amountToAdd;
 
                     if (remaining <= 0)
-                        return;
+                    {
+                        PopulateCraftingGrid();
+                        return; // done adding everything
+                    }
+                    
                 }
             }
         }
 
-
+        //if items remian,put them in empty slots 
         foreach (Slot slot in allSlots)
         {
             if (!slot.HasItem())
@@ -112,7 +141,8 @@ public class Inventory2 : MonoBehaviour
                 remaining -= amountToPlace;
 
                 if (remaining <= 0)
-                    return;
+                    PopulateCraftingGrid();
+                return; // done adding everything
             }
         }
 
@@ -120,6 +150,7 @@ public class Inventory2 : MonoBehaviour
         {
             Debug.Log("inventory is full, could not add item" + remaining + "of" + itemToAdd.itemName);
         }
+        PopulateCraftingGrid();
     }
 
     private void StartDrag()
@@ -298,13 +329,16 @@ public class Inventory2 : MonoBehaviour
 
         if (prefab == null) return;
 
+        //spawn
         GameObject dropped = Instantiate(prefab, Camera.main.transform.position + Camera.main.transform.forward, Quaternion.identity);
 
         Ingredients ingredient = dropped.GetComponent<Ingredients>();
         ingredient.ingredient = ingredientData;
         ingredient.amount = equippedSlot.GetAmount();
 
-        equippedSlot.ClearSlot();
+        equippedSlot.ClearSlot(); // remove
+
+        PopulateCraftingGrid();
     }
 
     private void UpdateItemDescription()
@@ -325,5 +359,97 @@ public class Inventory2 : MonoBehaviour
             }
             itemdescriptionParent.SetActive(false);
         }
+    }
+
+    private void PopulateCraftingGrid()
+    {
+        for (int i = craftingGrid.childCount - 1; i >= 0; i--)
+        {
+            Destroy(craftingGrid.GetChild(i).gameObject);
+        }
+
+        foreach(Recipes recipes in allRecipes)
+        {
+            GameObject btnObj = Instantiate(craftingBTNprefab, craftingGrid);
+
+            Image img = btnObj.transform.GetChild(0).GetComponent<Image>();
+            img.sprite = recipes.result.itemIcon;
+
+            Button btn = btnObj.GetComponent<Button>();
+
+            btn.interactable = CanCraft(recipes);
+            btn.onClick.RemoveAllListeners();
+            btn.onClick.AddListener(() => Craft(recipes));
+
+            foreach (Elements elements in recipes.elements)
+            {
+                GameObject neededItem = Instantiate(itemneededUIprefab, btnObj.transform.GetChild(1));
+                neededItem.GetComponent<Image>().sprite = elements.ingredient.itemIcon;
+                neededItem.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "x" + elements.amount.ToString();
+            }
+        }
+    }
+
+    public void Craft(Recipes recipes)
+    {
+        if (!CanCraft(recipes))
+        {
+            return;
+        }
+
+        ConsumeElements(recipes);
+        Additem(recipes.result, recipes.resultAmount);
+        PopulateCraftingGrid();
+    }
+
+    private void ConsumeElements(Recipes recipes)
+    {
+        foreach (Elements elements in recipes.elements)
+        {
+            int remaining = elements.amount;
+
+            foreach (Slot slot in allSlots)
+            {
+                if (!slot.HasItem()) continue;
+                if (slot.GetItem() != elements.ingredient) continue;
+
+                int take = Mathf.Min(slot.GetAmount(), remaining);
+                slot.SetItem(slot.GetItem(), slot.GetAmount() - take);
+
+                if(slot.GetAmount() <= 0)
+                    slot.ClearSlot();
+
+                remaining -= take;
+                if (remaining <= 0)
+                    break;
+
+            }
+
+        }
+
+    }
+
+
+    public bool CanCraft(Recipes recipes)
+    {
+        foreach (Elements elements in recipes.elements)
+        {
+            int totalFound = 0;
+
+            foreach (Slot slot in allSlots)
+            {
+                if(slot.HasItem() && slot.GetItem() == elements.ingredient)
+                {
+                    totalFound += slot.GetAmount();
+
+                }
+            }
+
+            if(totalFound < elements.amount)
+                return false;
+
+        }
+        return true;
+
     }
 }
