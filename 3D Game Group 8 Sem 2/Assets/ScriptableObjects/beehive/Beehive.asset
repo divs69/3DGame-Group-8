@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Beehive
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   itemName: Beehive
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 1640094891, guid: 8ef9723a141a9cc4785933236a24d425, type: 3}
   description: "This is a behive. \nCrush it to get honey"
   itemPrefab: {fileID: 4047533980349868628, guid: 8576b1124deaf6340866f2e121200e54, type: 3}
   maxStackSize: 50

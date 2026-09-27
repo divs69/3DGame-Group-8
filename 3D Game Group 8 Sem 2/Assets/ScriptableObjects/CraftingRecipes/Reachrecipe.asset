@@ -10,8 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6be6d33e5cc13b34192f46a437759630, type: 3}
-  m_Name: potion1recipe
+  m_Name: Reachrecipe
   m_EditorClassIdentifier: Assembly-CSharp::Recipes
-  elements: []
-  result: {fileID: 11400000, guid: cd33fd60cea88e341ad31a498f5ed072, type: 2}
-  resultAmount: 3
+  elements:
+  - ingredient: {fileID: 11400000, guid: c6ac46deb69bbe14789bcf88afdcc846, type: 2}
+    amount: 1
+  - ingredient: {fileID: 11400000, guid: 807c3d047943e8b418d79d5c379e45d7, type: 2}
+    amount: 1
+  result: {fileID: 11400000, guid: b5edf5537a42faa47b06770231e6f367, type: 2}
+  resultAmount: 1

@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3c9985698d32c44895dded89c5850d2, type: 3}
-  m_Name: Mushroom
+  m_Name: yellowcrystal
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
-  itemName: Red Shroom
-  itemIcon: {fileID: 1221959797, guid: 8ef9723a141a9cc4785933236a24d425, type: 3}
-  description: This is the Gnomes Favourite Shroom
-  itemPrefab: {fileID: 5565406460826220209, guid: 02f0845fb4ac7f147bbbd636949f2a80, type: 3}
+  itemName: Sylevis Crystal
+  itemIcon: {fileID: -999980860, guid: f38181c6d00039d4795338f9ac1fd842, type: 3}
+  description: "This is a Yellow Crystal. \nI dont suggest touching it.......its
+    yellow for a reason"
+  itemPrefab: {fileID: 7533019260155151981, guid: a70811474eb990144ba15c33c5f36ff5, type: 3}
   maxStackSize: 50
   handItemPrefab: {fileID: 0}

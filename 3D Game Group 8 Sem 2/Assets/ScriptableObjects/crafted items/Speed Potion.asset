@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3c9985698d32c44895dded89c5850d2, type: 3}
-  m_Name: potion1
+  m_Name: Speed Potion
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
-  itemName: HoneyComb
-  itemIcon: {fileID: 0}
-  description: its tasty
-  itemPrefab: {fileID: 4813621336358070604, guid: 2d6ef6e56c3274c4b9830bfd470a2991, type: 3}
-  maxStackSize: 50
+  itemName: Speed Potion
+  itemIcon: {fileID: 1471572043, guid: f38181c6d00039d4795338f9ac1fd842, type: 3}
+  description: your speed increases 2x
+  itemPrefab: {fileID: 8688631935616092581, guid: 3ee4192fc4b9c664b8c057daee52a2e7, type: 3}
+  maxStackSize: 1
   handItemPrefab: {fileID: 0}
