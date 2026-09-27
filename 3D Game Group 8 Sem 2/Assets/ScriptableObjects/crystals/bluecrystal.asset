@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3c9985698d32c44895dded89c5850d2, type: 3}
-  m_Name: Mushroom
+  m_Name: bluecrystal
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
-  itemName: Red Shroom
-  itemIcon: {fileID: 1221959797, guid: 8ef9723a141a9cc4785933236a24d425, type: 3}
-  description: This is the Gnomes Favourite Shroom
-  itemPrefab: {fileID: 5565406460826220209, guid: 02f0845fb4ac7f147bbbd636949f2a80, type: 3}
+  itemName: Valennoria Crystal
+  itemIcon: {fileID: -323937155, guid: f38181c6d00039d4795338f9ac1fd842, type: 3}
+  description: Increases your reach when mixed in a potion.
+  itemPrefab: {fileID: 5820003874104006381, guid: 27330e09e9db59942b57db932f7479d2, type: 3}
   maxStackSize: 50
   handItemPrefab: {fileID: 0}
