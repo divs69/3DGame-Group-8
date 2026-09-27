@@ -5,7 +5,7 @@ using JetBrains.Annotations;
 
 [System.Serializable]
 
-public class Element
+public class Elements
 {
     public IngredientData ingredient;
     public int amount;
@@ -14,7 +14,7 @@ public class Element
 [CreateAssetMenu(fileName = "Recipes", menuName = "Scriptable Objects/NewRecipes")]
 public class Recipes : ScriptableObject
 {
-    public List<Element> elements;
+    public List<Elements> elements;
     public IngredientData result;
     public int resultAmount = 1;
 }

@@ -14,23 +14,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d4300b9e7a26e448952f6a2e96d245f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 157.15999
+      value: 157.15996
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d4300b9e7a26e448952f6a2e96d245f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 157.15999
+      value: 157.15996
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d4300b9e7a26e448952f6a2e96d245f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 881.76996
+      value: 895.6425
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d4300b9e7a26e448952f6a2e96d245f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 194.30002
+      value: 195.39229
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d4300b9e7a26e448952f6a2e96d245f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 252.96788
+      value: 223.6588
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d4300b9e7a26e448952f6a2e96d245f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -107,8 +107,8 @@ BoxCollider:
   m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.28218156, y: 0.2580286, z: 0.01410763}
-  m_Center: {x: -0.019179704, y: -0.03013337, z: 0.009842262}
+  m_Size: {x: 0.28218156, y: 0.25802857, z: 0.20384367}
+  m_Center: {x: -0.019179704, y: -0.03013337, z: 0.10471051}
 --- !u!114 &6113450431950444870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,5 +121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7cc3e71b39f8642866de8321b47a5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
-  ingredient: {fileID: 11400000, guid: b82600b426d8ac7429f4b711dd39a39a, type: 2}
+  ingredient: {fileID: 11400000, guid: 43604da319818f7429360cd67d6a7746, type: 2}
   amount: 1

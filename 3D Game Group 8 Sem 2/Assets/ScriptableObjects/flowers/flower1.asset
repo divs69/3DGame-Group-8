@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c9985698d32c44895dded89c5850d2, type: 3}
   m_Name: flower1
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
-  itemName: 
+  itemName: other flower
   itemIcon: {fileID: 0}
   description: 
-  itemPrefab: {fileID: 9011048691255490585, guid: 0848ba806c9447648bcb6e053c4d17b9, type: 3}
+  itemPrefab: {fileID: 2581830861512080153, guid: 7576c56949f2c92498625b3fcab0eafe, type: 3}
   maxStackSize: 50
   handItemPrefab: {fileID: 0}

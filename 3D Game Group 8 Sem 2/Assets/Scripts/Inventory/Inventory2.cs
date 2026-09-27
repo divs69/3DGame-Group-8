@@ -8,18 +8,21 @@ using UnityEngine.UI;
 
 public class Inventory2 : MonoBehaviour
 {
+    public static Inventory2 instance;
+
     //objects in game world. collectables 
     public IngredientData MushroomItem;
     public IngredientData CrystalItem;
     public IngredientData BeehiveItem;
     public IngredientData FlowerItem;
     public IngredientData Flower1Item;
-    public IngredientData HoneyCombItem;
+    
 
     //Slot Containers
     public GameObject hotbarObj;
     public GameObject inventorySlotParent;
     public GameObject container;
+    public GameObject craftingMenu;
 
     public Image dragIcon;
 
@@ -47,6 +50,7 @@ public class Inventory2 : MonoBehaviour
     public List<Recipes> allRecipes = new List<Recipes>();
     public Transform craftingGrid;
     public GameObject craftingBTNprefab;
+    public GameObject itemneededUIprefab;
 
     //slot lists
     private List<Slot> inventorySlots = new List<Slot>();
@@ -68,11 +72,9 @@ public class Inventory2 : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            container.SetActive(!container.activeInHierarchy);
-            Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
-            Cursor.visible = !Cursor.visible;
 
-            
+            ToggleInventory();
+
         }
 
         DetectLookedAtItem();
@@ -88,6 +90,15 @@ public class Inventory2 : MonoBehaviour
         UpdateHotBarOpacity();
 
         UpdateItemDescription();
+    }
+
+    public void ToggleInventory()
+    {
+        container.SetActive(!container.activeInHierarchy);
+        Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = !Cursor.visible;
+
+        craftingMenu.SetActive(true);
     }
 
     public void Additem(IngredientData itemToAdd, int amount)
@@ -369,6 +380,13 @@ public class Inventory2 : MonoBehaviour
             btn.interactable = CanCraft(recipes);
             btn.onClick.RemoveAllListeners();
             btn.onClick.AddListener(() => Craft(recipes));
+
+            foreach (Elements elements in recipes.elements)
+            {
+                GameObject neededItem = Instantiate(itemneededUIprefab, btnObj.transform.GetChild(1));
+                neededItem.GetComponent<Image>().sprite = elements.ingredient.itemIcon;
+                neededItem.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "x" + elements.amount.ToString();
+            }
         }
     }
 
@@ -379,25 +397,55 @@ public class Inventory2 : MonoBehaviour
             return;
         }
 
+        ConsumeElements(recipes);
+        Additem(recipes.result, recipes.resultAmount);
         PopulateCraftingGrid();
     }
 
+    private void ConsumeElements(Recipes recipes)
+    {
+        foreach (Elements elements in recipes.elements)
+        {
+            int remaining = elements.amount;
+
+            foreach (Slot slot in allSlots)
+            {
+                if (!slot.HasItem()) continue;
+                if (slot.GetItem() != elements.ingredient) continue;
+
+                int take = Mathf.Min(slot.GetAmount(), remaining);
+                slot.SetItem(slot.GetItem(), slot.GetAmount() - take);
+
+                if(slot.GetAmount() <= 0)
+                    slot.ClearSlot();
+
+                remaining -= take;
+                if (remaining <= 0)
+                    break;
+
+            }
+
+        }
+
+    }
+
+
     public bool CanCraft(Recipes recipes)
     {
-        foreach (Element element in recipes.elements)
+        foreach (Elements elements in recipes.elements)
         {
             int totalFound = 0;
 
             foreach (Slot slot in allSlots)
             {
-                if(slot.HasItem() && slot.GetItem() == element.ingredient)
+                if(slot.HasItem() && slot.GetItem() == elements.ingredient)
                 {
                     totalFound += slot.GetAmount();
 
                 }
             }
 
-            if(totalFound < element.amount)
+            if(totalFound < elements.amount)
                 return false;
 
         }
