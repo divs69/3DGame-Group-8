@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8215717b7804d0f45b01ee5173b7d06b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 734.1503
+      value: 346
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8215717b7804d0f45b01ee5173b7d06b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 131.09744
+      value: 128.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8215717b7804d0f45b01ee5173b7d06b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 491.53058
+      value: 543.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8215717b7804d0f45b01ee5173b7d06b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8215717b7804d0f45b01ee5173b7d06b, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -91,8 +95,8 @@ BoxCollider:
   m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 9.638061, y: 5.7881775, z: 5.767456}
-  m_Center: {x: -0.014695168, y: 4.440857, z: -0.108428955}
+  m_Size: {x: 36.115005, y: 7.113022, z: 41.58319}
+  m_Center: {x: 0.61730194, y: 5.103279, z: 0.880249}
 --- !u!114 &-3586940577237635688
 MonoBehaviour:
   m_ObjectHideFlags: 0
