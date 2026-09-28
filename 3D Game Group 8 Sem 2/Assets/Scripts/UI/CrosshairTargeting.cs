@@ -37,7 +37,7 @@ public class CrosshairTargeting : MonoBehaviour
     {
         Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
-        float reachDistance = blepController != null ? blepController.maxReachDistance : 10f;
+        float reachDistance = blepController != null ? blepController.maxReachDistance : 15f;
         LayerMask itemLayer = blepController != null ? blepController.collectableLayer : ~0;
 
         if (Physics.Raycast(ray, out RaycastHit hit, reachDistance, itemLayer))
