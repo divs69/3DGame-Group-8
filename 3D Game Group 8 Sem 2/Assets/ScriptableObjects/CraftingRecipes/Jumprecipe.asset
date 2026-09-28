@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Jumprecipe
   m_EditorClassIdentifier: Assembly-CSharp::Recipes
   elements:
-  - ingredient: {fileID: 11400000, guid: 75f72f6f0b8874949a34381f0169261f, type: 2}
+  - ingredient: {fileID: 11400000, guid: 43604da319818f7429360cd67d6a7746, type: 2}
     amount: 2
   - ingredient: {fileID: 11400000, guid: 7f4b0d2527d5a6b44990b751374404f8, type: 2}
     amount: 2

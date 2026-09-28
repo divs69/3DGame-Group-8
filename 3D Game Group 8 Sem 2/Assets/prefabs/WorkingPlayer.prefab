@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3867649169654428354}
   m_Layer: 0
   m_Name: WorkingPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,8 +32,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.47, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 9.351, y: 12.584, z: 10}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5954790639748710973}
   m_Father: {fileID: 0}
@@ -200,6 +200,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 4fc0866d-8018-4839-8874-e118ba2294ab
     m_ActionName: 'Player/Look[/Mouse/delta]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3867649169654428354}
+        m_TargetAssemblyTypeName: FPController, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: eee9597e-8db9-47f4-b74a-899a3aa35c34
+    m_ActionName: 'Player/Jump[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -217,8 +233,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b343cf188a6692419317d8bfd095ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  moveSpeed: 10
-  gravity: -24.33
+  moveSpeed: 50
+  gravity: -100
+  jumpHeight: 10
   cameraTransform: {fileID: 5954790639748710973}
   lookSensitivity: 0.44
   verticalLookLimit: 90
@@ -249,13 +266,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5701443139859708775}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.62, z: 0}
+  m_LocalRotation: {x: -0, y: -0.5700958, z: -0, w: 0.82157826}
+  m_LocalPosition: {x: 0, y: 0.9629989, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 227941545973866703}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -69.514, z: 0}
 --- !u!20 &5288888495731344792
 Camera:
   m_ObjectHideFlags: 0

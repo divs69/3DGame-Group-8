@@ -6,16 +6,13 @@ public class CaveTrigger : MonoBehaviour
 
     public BoxCollider Cavetrigger;
 
-    
-        [SerializeField]
-     
-    public BoxCollider cavetrigger;
-
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             SceneManager.LoadScene("CaveScene");
+
+            Debug.Log("it works?");
         }
     }
     
