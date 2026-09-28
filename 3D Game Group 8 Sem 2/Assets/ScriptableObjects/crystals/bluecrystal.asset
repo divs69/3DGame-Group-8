@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c9985698d32c44895dded89c5850d2, type: 3}
+  m_Name: bluecrystal
+  m_EditorClassIdentifier: Assembly-CSharp::IngredientData
+  itemName: Valennoria Crystal
+  itemIcon: {fileID: -323937155, guid: f38181c6d00039d4795338f9ac1fd842, type: 3}
+  description: Increases your reach when mixed in a potion.
+  itemPrefab: {fileID: 5820003874104006381, guid: 27330e09e9db59942b57db932f7479d2, type: 3}
+  maxStackSize: 50
+  handItemPrefab: {fileID: 0}
