@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class Inventory2 : MonoBehaviour
 {
     public static Inventory2 instance;
+    public bool IsPaused { get; private set; }
 
     //objects in game world. collectables 
     public IngredientData MushroomItem;
@@ -102,6 +103,7 @@ public class Inventory2 : MonoBehaviour
         Cursor.visible = !Cursor.visible;
 
         craftingMenu.SetActive(true);
+        IsPaused = false;
     }
 
     public void Additem(IngredientData itemToAdd, int amount)
