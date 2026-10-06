@@ -11375,7 +11375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Settings
   SettingsButton: {fileID: 497129466}
-  ResumeButton: {fileID: 0}
+  ResumeButton: {fileID: 1287992105}
   SettingsPanel: {fileID: 206285694}
   QuitButton: {fileID: 1287992105}
   VolumeSlider: {fileID: 1452866681}
