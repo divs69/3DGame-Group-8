@@ -6225,7 +6225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &170428440
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11581,11 +11581,23 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.1971755, y: 2.1971755, z: 1.6685972}
-  m_Center: {x: 0.000014424331, y: 0.000012326628, z: -0.45161492}
+  m_Size: {x: 4.2771406, y: 4.820294, z: 3.7859364}
+  m_Center: {x: 1.0399963, y: 1.3115723, z: 0.607055}
+--- !u!114 &652413701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652413698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bae9907c4a1cba4cb8e568fa5cf209b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Crafting
 --- !u!43 &666077713
 Mesh:
   m_ObjectHideFlags: 0
@@ -30135,6 +30147,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 473e0e2b0e0d11248b6ce7ee415b4024, type: 3}
       insertIndex: -1
       addedObject: {fileID: 652413700}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 473e0e2b0e0d11248b6ce7ee415b4024, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 652413701}
   m_SourcePrefab: {fileID: 100100000, guid: 473e0e2b0e0d11248b6ce7ee415b4024, type: 3}
 --- !u!1 &1002801176
 GameObject:
@@ -30182,6 +30197,7 @@ GameObject:
   - component: {fileID: 1009641835}
   - component: {fileID: 1009641837}
   - component: {fileID: 1009641836}
+  - component: {fileID: 1009641838}
   m_Layer: 0
   m_Name: LevelOne Terrain
   m_TagString: Untagged
@@ -30219,7 +30235,7 @@ TerrainCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 15445fc07ea5a4249b73e1a74822b292, type: 2}
@@ -30265,6 +30281,28 @@ Terrain:
   m_EnableTreesAndDetailsRayTracing: 0
   m_EnableHeightmapLODFrustumCulling: 1
   m_TreeMotionVectorModeOverride: 3
+--- !u!64 &1009641838
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009641834}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &1027277594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37180,7 +37218,7 @@ Transform:
   m_GameObject: {fileID: 1284377941}
   serializedVersion: 2
   m_LocalRotation: {x: -0.20575382, y: -0.97774506, z: 0.024922397, w: 0.032540467}
-  m_LocalPosition: {x: -0.13999306, y: -0, z: 2.34}
+  m_LocalPosition: {x: -0.152, y: -0.006, z: 2.179}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40931,7 +40969,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1645645109
 RectTransform:
   m_ObjectHideFlags: 0
@@ -48999,7 +49037,7 @@ MonoBehaviour:
   craftingMenu: {fileID: 170428439}
   dragIcon: {fileID: 525936064}
   pickupRange: 15
-  highlightMaterial: {fileID: 2100000, guid: a3bad1fb855b5c64cac2f820023af5c6, type: 2}
+  highlightMaterial: {fileID: 2100000, guid: bf622f1ae2650b04a84e41ed20ae00e9, type: 2}
   equippedOpacity: 0.9
   normalOpacity: 0.58
   itemdescriptionParent: {fileID: 1645645108}

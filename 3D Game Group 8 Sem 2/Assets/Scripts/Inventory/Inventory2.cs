@@ -41,7 +41,7 @@ public class Inventory2 : MonoBehaviour
     private bool isDragging = false;
 
     private int equippedHotBarIndex = 0; //0 - 5 numpad keys in the hotbar
-    public float equippedOpacity = 0.9f;
+    public float equippedOpacity = 4f;
     public float normalOpacity = 0.58f;
     
     //Item Descriptions
@@ -102,8 +102,8 @@ public class Inventory2 : MonoBehaviour
         Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = !Cursor.visible;
 
-        craftingMenu.SetActive(true);
-        IsPaused = false;
+        craftingMenu.SetActive(false);
+        IsPaused = true;
     }
 
     public void Additem(IngredientData itemToAdd, int amount)
