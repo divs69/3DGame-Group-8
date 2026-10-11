@@ -10,8 +10,9 @@ public class DontDestroy : MonoBehaviour
     {
         if (persistentObjects[objectIndex] == null)
         {
-            persistentObjects[objectIndex] = gameObject;
             DontDestroyOnLoad(gameObject);
+            
+            
         }
         else if (persistentObjects[objectIndex] != null)
         {
