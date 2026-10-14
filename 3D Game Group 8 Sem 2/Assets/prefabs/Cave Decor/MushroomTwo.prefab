@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5652678573070677780
+--- !u!1001 &4713044063276142513
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -737
+      value: 328.39996
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 86
+      value: -217.00006
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -526
+      value: -799.2003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
       propertyPath: m_LocalRotation.w
@@ -62,56 +62,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
       propertyPath: m_Name
-      value: MushroomTwo (9)
+      value: MushroomTwo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1306987562676290731}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5171325603181479298}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
---- !u!1 &4806238997864761925 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 757b298d9fbc4d44f96c2bbe73f22366, type: 3}
-  m_PrefabInstance: {fileID: 5652678573070677780}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1306987562676290731
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4806238997864761925}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 1
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 4.870013, y: 8.122224, z: 4.870013}
-  m_Center: {x: 0, y: 4.061072, z: 0}
---- !u!114 &5171325603181479298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4806238997864761925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e7cc3e71b39f8642866de8321b47a5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Ingredients
-  ingredient: {fileID: 0}
-  amount: 1
