@@ -40,14 +40,14 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _botomline: 0.38
+    - _botomline: 1
     - _metallic: 1
     - _smoothness: 1
-    - _topline: 0.71
+    - _topline: 1
     m_Colors:
-    - _base_colour: {r: 24.251463, g: 0, b: 10.93501, a: 1}
-    - _bottomcolour: {r: 0.15094331, g: 0.23168643, b: 0.9056604, a: 1}
-    - _topcolour: {r: 12.996035, g: 6.824961, b: 9.651487, a: 1}
+    - _base_colour: {r: 2.6937973, g: 102.90356, b: 0, a: 1}
+    - _bottomcolour: {r: 1, g: 0, b: 0.5943394, a: 1}
+    - _topcolour: {r: 4.975761, g: 40.57163, b: 9.72188, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &4813403249265006653
