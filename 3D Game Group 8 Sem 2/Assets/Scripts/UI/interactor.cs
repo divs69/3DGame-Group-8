@@ -23,7 +23,7 @@ public class interactor : MonoBehaviour
     {
         DetectInteractable();
 
-            if (currentInteractable != null && Input.GetKeyDown(KeyCode.Tab))
+            if (currentInteractable != null && Input.GetKeyDown(KeyCode.E))
             {
                    currentInteractable.interact();
             }
