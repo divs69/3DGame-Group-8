@@ -12345,6 +12345,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: crystal ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6317578925029434746, guid: e9d84a6ef1c835741bf23a5d52b78bda, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d900aca0da913ba4499cfb144c8a2df8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
