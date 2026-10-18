@@ -40,7 +40,7 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _Color: {r: 0, g: 0.3420527, b: 0.6745098, a: 1}
-    - _Ripplecolour: {r: 0.7496641, g: 0.6626913, b: 0.9622642, a: 1}
+    - _Color: {r: 0.6745098, g: 0.055974487, b: 0, a: 1}
+    - _Ripplecolour: {r: 1, g: 0.7243235, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
