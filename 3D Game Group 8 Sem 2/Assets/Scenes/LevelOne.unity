@@ -56705,7 +56705,7 @@ MonoBehaviour:
   craftingMenu: {fileID: 170428439}
   dragIcon: {fileID: 525936064}
   pickupRange: 15
-  highlightMaterial: {fileID: 2100000, guid: bf622f1ae2650b04a84e41ed20ae00e9, type: 2}
+  highlightMaterial: {fileID: -876546973899608171, guid: 4db14ba473478e64a8f6cb3b3d766fc9, type: 3}
   equippedOpacity: 0.9
   normalOpacity: 0.58
   itemdescriptionParent: {fileID: 1645645108}
