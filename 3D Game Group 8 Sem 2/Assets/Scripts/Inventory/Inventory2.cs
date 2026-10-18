@@ -16,6 +16,7 @@ public class Inventory2 : MonoBehaviour
     public IngredientData BeehiveItem;
     public IngredientData FlowerItem;
     public IngredientData Flower1Item;
+    public IngredientData FungusItem;
     public IngredientData SpeedpotiongreenItem;
     public IngredientData ReachpotionblueItem;
     public IngredientData JumppotionpinkItem;

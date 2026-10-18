@@ -45,9 +45,9 @@ Material:
     - _smoothness: 1
     - _topline: 1
     m_Colors:
-    - _base_colour: {r: 19.594637, g: 0, b: 36.329643, a: 1}
-    - _bottomcolour: {r: 1, g: 0, b: 0.62352943, a: 1}
-    - _topcolour: {r: 6.9074154, g: 0.5250861, b: 12.84447, a: 1}
+    - _base_colour: {r: 0, g: 0.5172052, b: 36.329643, a: 1}
+    - _bottomcolour: {r: 1, g: 0, b: 0.25172472, a: 1}
+    - _topcolour: {r: 0.5379885, g: 1.8405265, b: 12.844469, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &4813403249265006653
