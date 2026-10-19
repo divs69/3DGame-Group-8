@@ -103,7 +103,7 @@ public class Inventory2 : MonoBehaviour
         Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = !Cursor.visible;
 
-        craftingMenu.SetActive(true);
+        craftingMenu.SetActive(false);
     }
 
     public void Additem(IngredientData itemToAdd, int amount)
