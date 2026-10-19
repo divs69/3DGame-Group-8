@@ -74,30 +74,24 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 79262fc4013b6654c8629480ee6220b2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -1612805983344319102}
+      addedObject: {fileID: 3077144683280835326}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 79262fc4013b6654c8629480ee6220b2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3077144683280835326}
+      addedObject: {fileID: 4374923354925202960}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 79262fc4013b6654c8629480ee6220b2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5602014538787512219}
   m_SourcePrefab: {fileID: 100100000, guid: 79262fc4013b6654c8629480ee6220b2, type: 3}
+--- !u!23 &883309508973593648 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 79262fc4013b6654c8629480ee6220b2, type: 3}
+  m_PrefabInstance: {fileID: 1982622807283603636}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1676140750107518437 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 79262fc4013b6654c8629480ee6220b2, type: 3}
   m_PrefabInstance: {fileID: 1982622807283603636}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-1612805983344319102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1676140750107518437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e7cc3e71b39f8642866de8321b47a5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Ingredients
-  ingredient: {fileID: 11400000, guid: fad0b70c227213d46b54feb70b1b08ab, type: 2}
-  amount: 1
 --- !u!65 &3077144683280835326
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -119,3 +113,31 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 16.556608, y: 25.669628, z: 6.344594}
   m_Center: {x: 0.38595375, y: -0.7607259, z: 2.5480409}
+--- !u!114 &4374923354925202960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676140750107518437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cbdbabd644086c4a955123c4a75e559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
+  data: {fileID: 11400000, guid: fad0b70c227213d46b54feb70b1b08ab, type: 2}
+--- !u!114 &5602014538787512219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676140750107518437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbac1e74aa3f00f49b0c9a23a6b5b540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverHighlight
+  floatingCanvas: {fileID: 0}
+  meshRenderer: {fileID: 883309508973593648}
+  glowColor: {r: 1, g: 1, b: 0.19215687, a: 1}

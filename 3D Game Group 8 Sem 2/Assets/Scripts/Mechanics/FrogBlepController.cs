@@ -17,6 +17,7 @@ public class FrogBlepController : MonoBehaviour
 
     private bool isBlepping = false;
     private HoverHighlight currentHighlightedItem;
+    public bool IsAimingAtCollectable => currentHighlightedItem != null;
 
     private void Update()
     {
@@ -25,7 +26,7 @@ public class FrogBlepController : MonoBehaviour
 
         CheckForAimHighlight();
 
-        if (Input.GetKeyDown(KeyCode.E) && !isBlepping)
+        if (Input.GetKeyDown(KeyCode.E) && !isBlepping && !interactor.LookingAtInteractable)
         {
             StartCoroutine(PerformBlep());
         }

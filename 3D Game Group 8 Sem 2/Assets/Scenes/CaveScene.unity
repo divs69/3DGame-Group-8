@@ -34336,7 +34336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 796379926}
   m_Layer: 0
-  m_Name: fog paricle effecf
+  m_Name: fog particle effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

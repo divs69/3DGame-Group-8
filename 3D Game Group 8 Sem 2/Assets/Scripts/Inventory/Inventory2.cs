@@ -63,6 +63,7 @@ public class Inventory2 : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         inventorySlots.AddRange(inventorySlotParent.GetComponentsInChildren<Slot>());
         hotbarSlots.AddRange(hotbarObj.GetComponentsInChildren<Slot>());
 
@@ -403,6 +404,7 @@ public class Inventory2 : MonoBehaviour
 
         ConsumeElements(recipes);
         Additem(recipes.result, recipes.resultAmount);
+        TutorialEvents.PotionCrafted?.Invoke();
         PopulateCraftingGrid();
     }
 

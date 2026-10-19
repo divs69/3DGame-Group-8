@@ -5036,10 +5036,54 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 06608a2b9929ad04c8cbf01c1c2e3e05, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7466173021846315308}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 06608a2b9929ad04c8cbf01c1c2e3e05, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5965406625225340651}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 06608a2b9929ad04c8cbf01c1c2e3e05, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3019242269669248882}
   m_SourcePrefab: {fileID: 100100000, guid: 06608a2b9929ad04c8cbf01c1c2e3e05, type: 3}
 --- !u!4 &7460055143495421326 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 06608a2b9929ad04c8cbf01c1c2e3e05, type: 3}
+  m_PrefabInstance: {fileID: 6921410156557478501}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7839817026262439732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 06608a2b9929ad04c8cbf01c1c2e3e05, type: 3}
+  m_PrefabInstance: {fileID: 6921410156557478501}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5965406625225340651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7839817026262439732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbac1e74aa3f00f49b0c9a23a6b5b540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverHighlight
+  floatingCanvas: {fileID: 0}
+  meshRenderer: {fileID: 8632376275232700129}
+  glowColor: {r: 1, g: 1, b: 0.19215687, a: 1}
+--- !u!114 &3019242269669248882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7839817026262439732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cbdbabd644086c4a955123c4a75e559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
+  data: {fileID: 11400000, guid: d8f8d2ca58f30d54ea9901918fa25dd1, type: 2}
+--- !u!23 &8632376275232700129 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 06608a2b9929ad04c8cbf01c1c2e3e05, type: 3}
   m_PrefabInstance: {fileID: 6921410156557478501}
   m_PrefabAsset: {fileID: 0}

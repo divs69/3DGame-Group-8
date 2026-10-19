@@ -25260,6 +25260,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1901809704241324475, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
+      propertyPath: mouthOrigin
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3984478248991745112, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
       propertyPath: m_Name
       value: WorkingPlayer
@@ -80558,6 +80562,7 @@ MonoBehaviour:
   BeehiveItem: {fileID: 11400000, guid: 807c3d047943e8b418d79d5c379e45d7, type: 2}
   FlowerItem: {fileID: 11400000, guid: 43604da319818f7429360cd67d6a7746, type: 2}
   Flower1Item: {fileID: 11400000, guid: 7f4b0d2527d5a6b44990b751374404f8, type: 2}
+  FungusItem: {fileID: 0}
   SpeedpotiongreenItem: {fileID: 11400000, guid: cd33fd60cea88e341ad31a498f5ed072, type: 2}
   ReachpotionblueItem: {fileID: 11400000, guid: b5edf5537a42faa47b06770231e6f367, type: 2}
   JumppotionpinkItem: {fileID: 11400000, guid: 5c9f5431b4c30fd4d8e4f20d940dc038, type: 2}
