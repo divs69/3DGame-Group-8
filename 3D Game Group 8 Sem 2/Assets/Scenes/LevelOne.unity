@@ -78150,6 +78150,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7576c56949f2c92498625b3fcab0eafe, type: 3}
+--- !u!1 &1716232149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1716232151}
+  - component: {fileID: 1716232150}
+  m_Layer: 0
+  m_Name: TutorialDirector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1716232150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716232149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d6ce2d0b6839b49a021d7477d09098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialDirector
+  player: {fileID: 1102892078}
+  blep: {fileID: 2095732252}
+  trail: {fileID: 665655876}
+  tuna: {fileID: 2100062122}
+  grimoireHighlight: {fileID: 0}
+  grimoirePlaceholder: {fileID: 26283355}
+  cauldronHighlight: {fileID: 0}
+  forestSpot: {fileID: 1123549430}
+  insideSpot: {fileID: 488367521}
+  cauldronSpot: {fileID: 448441943}
+  caveRoute:
+  - {fileID: 2122045387}
+  - {fileID: 375995053}
+  - {fileID: 51414752}
+  - {fileID: 783893393}
+  - {fileID: 1473766847}
+  - {fileID: 1135270082}
+  caveEntrance: {fileID: 2128254785}
+  runEvenIfCompleted: 0
+  ingredientsToCollect: 3
+  grimoireOpenHint: Press ESC to open your grimoire
+--- !u!4 &1716232151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716232149}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1280.9846, y: 169.3333, z: 538.6494}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1718842835
 GameObject:
   m_ObjectHideFlags: 0
@@ -85696,6 +85761,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5695466931360937510, guid: a2de72f8edf1d784b9173f4c3e5b0a70, type: 3}
   m_PrefabInstance: {fileID: 126058663}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2095732252 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8423405213751773975, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
+  m_PrefabInstance: {fileID: 735141048}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58042ebd0b68954d9673de67e135026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FrogBlepController
 --- !u!1001 &2095761645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88766,3 +88842,4 @@ SceneRoots:
   - {fileID: 918440095}
   - {fileID: 1034192224}
   - {fileID: 665655878}
+  - {fileID: 1716232151}
