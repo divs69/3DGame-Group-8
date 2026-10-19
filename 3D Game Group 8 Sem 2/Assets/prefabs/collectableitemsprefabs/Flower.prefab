@@ -4920,7 +4920,10 @@ PrefabInstance:
       addedObject: {fileID: 35460407096344460}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5d4300b9e7a26e448952f6a2e96d245f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6113450431950444870}
+      addedObject: {fileID: 7600404711397840565}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5d4300b9e7a26e448952f6a2e96d245f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6559891409204838077}
   m_SourcePrefab: {fileID: 100100000, guid: 5d4300b9e7a26e448952f6a2e96d245f, type: 3}
 --- !u!1 &2581830861512080153 stripped
 GameObject:
@@ -4948,7 +4951,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.28218156, y: 0.25802857, z: 0.20384367}
   m_Center: {x: -0.019179704, y: -0.03013337, z: 0.10471051}
---- !u!114 &6113450431950444870
+--- !u!114 &7600404711397840565
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4957,13 +4960,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 2581830861512080153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e7cc3e71b39f8642866de8321b47a5c, type: 3}
+  m_Script: {fileID: 11500000, guid: fbac1e74aa3f00f49b0c9a23a6b5b540, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Ingredients
-  ingredient: {fileID: 11400000, guid: 43604da319818f7429360cd67d6a7746, type: 2}
-  amount: 1
+  m_EditorClassIdentifier: Assembly-CSharp::HoverHighlight
+  floatingCanvas: {fileID: 0}
+  meshRenderer: {fileID: 4095035458059164364}
+  glowColor: {r: 0.9991487, g: 1, b: 0.19215687, a: 1}
+--- !u!114 &6559891409204838077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2581830861512080153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cbdbabd644086c4a955123c4a75e559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
+  data: {fileID: 11400000, guid: 43604da319818f7429360cd67d6a7746, type: 2}
 --- !u!4 &2927148244395958691 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5d4300b9e7a26e448952f6a2e96d245f, type: 3}
+  m_PrefabInstance: {fileID: 3392873722655032904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4095035458059164364 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 5d4300b9e7a26e448952f6a2e96d245f, type: 3}
   m_PrefabInstance: {fileID: 3392873722655032904}
   m_PrefabAsset: {fileID: 0}

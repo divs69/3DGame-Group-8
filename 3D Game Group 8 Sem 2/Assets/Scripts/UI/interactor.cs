@@ -7,6 +7,8 @@ public interface IInteractable
 
 public class interactor : MonoBehaviour
 {
+    public static bool LookingAtInteractable { get; private set; }
+
     public float interactRange = 5f;
 
     public GameObject interactUI;

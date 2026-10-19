@@ -4920,8 +4920,16 @@ PrefabInstance:
       addedObject: {fileID: 4457755647404917601}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 68774b90ad8a38a4d8a379f097c543a8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8539472723364808023}
+      addedObject: {fileID: 1022170360889553000}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 68774b90ad8a38a4d8a379f097c543a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7290119364024563438}
   m_SourcePrefab: {fileID: 100100000, guid: 68774b90ad8a38a4d8a379f097c543a8, type: 3}
+--- !u!23 &7353623355266144716 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 68774b90ad8a38a4d8a379f097c543a8, type: 3}
+  m_PrefabInstance: {fileID: 8200145467150239048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8522637498151101091 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 68774b90ad8a38a4d8a379f097c543a8, type: 3}
@@ -4953,7 +4961,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.8176193, y: 3.7523022, z: 2.131893}
   m_Center: {x: 0.016395543, y: -0.4464379, z: 1.0895543}
---- !u!114 &8539472723364808023
+--- !u!114 &1022170360889553000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4962,8 +4970,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 9011048691255490585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e7cc3e71b39f8642866de8321b47a5c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6cbdbabd644086c4a955123c4a75e559, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Ingredients
-  ingredient: {fileID: 11400000, guid: 7f4b0d2527d5a6b44990b751374404f8, type: 2}
-  amount: 1
+  m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
+  data: {fileID: 11400000, guid: 7f4b0d2527d5a6b44990b751374404f8, type: 2}
+--- !u!114 &7290119364024563438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9011048691255490585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbac1e74aa3f00f49b0c9a23a6b5b540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverHighlight
+  floatingCanvas: {fileID: 0}
+  meshRenderer: {fileID: 7353623355266144716}
+  glowColor: {r: 1, g: 0.98172176, b: 0.22352941, a: 1}
