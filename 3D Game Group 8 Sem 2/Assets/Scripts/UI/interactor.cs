@@ -59,4 +59,12 @@ public class interactor : MonoBehaviour
         LookingAtInteractable = false;
         interactUI.SetActive(false);
     }
+
+    public void ChangeVolume(float volume)
+    {
+        AudioListener.volume = volume;
+
+        PlayerPrefs.SetFloat("GameVolume", volume);
+        PlayerPrefs.Save();
+    }
 }

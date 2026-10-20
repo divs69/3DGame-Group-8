@@ -16,10 +16,10 @@ public class GameManager : MonoBehaviour
             instance = this;
             Destroy(gameObject);
         }
-        //else
-       // {
-           // Destroy(gameObject);
-        //}
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
         IsPaused = true;
         Time.timeScale = 0f;
 
-        Cursor.lockState = CursorLockMode.None;
+        
         Cursor.visible = true;
 
         if (settingsMenuUI != null)
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         IsPaused = false;
         Time.timeScale = 1f;
 
-        Cursor.lockState = CursorLockMode.Locked;
+       
         Cursor.visible = false;
 
         if (settingsMenuUI != null)
