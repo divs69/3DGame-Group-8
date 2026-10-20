@@ -4847,7 +4847,7 @@ GameObject:
   - component: {fileID: 194362160923060255}
   - component: {fileID: 243970893352534006}
   - component: {fileID: 4031012828602930814}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5026,6 +5026,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 06608a2b9929ad04c8cbf01c1c2e3e05, type: 3}
       propertyPath: m_Name
       value: fungus
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 06608a2b9929ad04c8cbf01c1c2e3e05, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
