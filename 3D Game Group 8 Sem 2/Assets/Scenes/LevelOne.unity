@@ -10378,7 +10378,7 @@ PrefabInstance:
       addedObject: {fileID: 640211241}
     - targetCorrespondingSourceObject: {fileID: -6070900075407532760, guid: 5cc77415b241c4841a53eccace0bf57e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 640211240}
+      addedObject: {fileID: 640211243}
   m_SourcePrefab: {fileID: 100100000, guid: 5cc77415b241c4841a53eccace0bf57e, type: 3}
 --- !u!4 &167890341 stripped
 Transform:
@@ -23184,23 +23184,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -6070900075407532760, guid: 5cc77415b241c4841a53eccace0bf57e, type: 3}
   m_PrefabInstance: {fileID: 167890340}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &640211240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640211232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b02b88a17a4b8a94789b6b515d03f38f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TutorialInteractable
-  hideAfterUse: 1
-  hideTarget: {fileID: 201208721}
-  onUse:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &640211241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23222,6 +23205,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.8164334, y: 0.9220517, z: 3.5572217}
   m_Center: {x: -0.1864071, y: 2.5067496, z: -0.033056486}
+--- !u!114 &640211243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640211232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288940b61e0cf5c46b8b608989d42aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::interactor
+  interactRange: 5
+  interactUI: {fileID: 1538232473}
 --- !u!1 &649975996
 GameObject:
   m_ObjectHideFlags: 0
@@ -85920,17 +85917,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: WorkingPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 5288888495731344792, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 8055
+      objectReference: {fileID: 0}
     - target: {fileID: 5954790639748710973, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.045
+      value: -0.242
       objectReference: {fileID: 0}
     - target: {fileID: 5954790639748710973, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2
+      value: 0.839
       objectReference: {fileID: 0}
     - target: {fileID: 5954790639748710973, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.214
+      value: 0.107
       objectReference: {fileID: 0}
     - target: {fileID: 5954790639748710973, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
       propertyPath: m_LocalRotation.w
