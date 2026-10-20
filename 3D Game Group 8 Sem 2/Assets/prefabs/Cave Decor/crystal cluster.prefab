@@ -44,8 +44,8 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.49803925, g: 0.95282966, b: 1, a: 1}
-  m_Intensity: 194.6
-  m_Range: 18.240501
+  m_Intensity: 193.49
+  m_Range: 7.81
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -137,27 +137,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: db30a0fb2fc921740a645853161f492e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 378.12
+      value: 262.74173
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db30a0fb2fc921740a645853161f492e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 378.11996
+      value: 262.7417
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db30a0fb2fc921740a645853161f492e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 378.11996
+      value: 262.7417
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db30a0fb2fc921740a645853161f492e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1568.9545
+      value: -584.09375
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db30a0fb2fc921740a645853161f492e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 148.8
+      value: 18.976273
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db30a0fb2fc921740a645853161f492e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1021
+      value: -122.99341
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db30a0fb2fc921740a645853161f492e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -205,6 +205,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: db30a0fb2fc921740a645853161f492e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6958364553198830349}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: db30a0fb2fc921740a645853161f492e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2689558321710873589}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: db30a0fb2fc921740a645853161f492e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7997166727897804868}
   m_SourcePrefab: {fileID: 100100000, guid: db30a0fb2fc921740a645853161f492e, type: 3}
 --- !u!4 &8442446848071610883 stripped
 Transform:
@@ -238,3 +244,31 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3214521003866156968, guid: db30a0fb2fc921740a645853161f492e, type: 3}
+--- !u!114 &2689558321710873589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9106920566649841849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbac1e74aa3f00f49b0c9a23a6b5b540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverHighlight
+  floatingCanvas: {fileID: 0}
+  meshRenderer: {fileID: 0}
+  glowColor: {r: 1, g: 1, b: 0.19215687, a: 1}
+--- !u!114 &7997166727897804868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9106920566649841849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cbdbabd644086c4a955123c4a75e559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
+  data: {fileID: 11400000, guid: c6ac46deb69bbe14789bcf88afdcc846, type: 2}

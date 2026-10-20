@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Fungus
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   itemName: 'Porfiria Fungus '
-  itemIcon: {fileID: 0}
-  description: 
+  itemIcon: {fileID: 21300000, guid: 6bc87d96b19428f4b8d6309092462343, type: 3}
+  description: 'Do Not Eat Raw! '
   itemPrefab: {fileID: 7839817026262439732, guid: 7f4ac47bab9c5ed40b3855394585aa70, type: 3}
   maxStackSize: 50
   handItemPrefab: {fileID: 0}

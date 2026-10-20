@@ -171,8 +171,8 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 1, g: 0.49999988, b: 0.9785106, a: 1}
-  m_Intensity: 605.7
-  m_Range: 20.8
+  m_Intensity: 206
+  m_Range: 6.4
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -266,6 +266,8 @@ GameObject:
   - component: {fileID: 8309860158137239965}
   - component: {fileID: 6104201037820853591}
   - component: {fileID: -8800838792222734654}
+  - component: {fileID: 546401580104865836}
+  - component: {fileID: 8255481933527823027}
   m_Layer: 0
   m_Name: Purple Crystal decor (1)
   m_TagString: Untagged
@@ -283,7 +285,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.23137817, y: 0.81516814, z: 0.14458698, w: 0.51094}
   m_LocalPosition: {x: -594.5, y: 180, z: 1470.7}
-  m_LocalScale: {x: 1.0181917, y: 1.8653666, z: 1.4313185}
+  m_LocalScale: {x: 0.46592304, y: 0.85358906, z: 0.6549693}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6193708252684033473}
@@ -369,3 +371,31 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5769486934180388862, guid: 73be2124666036d42a9d84dc48f5622b, type: 3}
+--- !u!114 &546401580104865836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5743926742629637250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cbdbabd644086c4a955123c4a75e559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
+  data: {fileID: 11400000, guid: 75f72f6f0b8874949a34381f0169261f, type: 2}
+--- !u!114 &8255481933527823027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5743926742629637250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbac1e74aa3f00f49b0c9a23a6b5b540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverHighlight
+  floatingCanvas: {fileID: 0}
+  meshRenderer: {fileID: 6104201037820853591}
+  glowColor: {r: 1, g: 1, b: 0.19215687, a: 1}

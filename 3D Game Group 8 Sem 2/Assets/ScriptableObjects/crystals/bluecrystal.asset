@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: Valennoria Crystal
   itemIcon: {fileID: -323937155, guid: f38181c6d00039d4795338f9ac1fd842, type: 3}
   description: Increases your reach when mixed in a potion.
-  itemPrefab: {fileID: 5820003874104006381, guid: 27330e09e9db59942b57db932f7479d2, type: 3}
+  itemPrefab: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
   maxStackSize: 50
   handItemPrefab: {fileID: 0}
