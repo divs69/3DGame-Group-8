@@ -21252,6 +21252,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.5021286, y: 1.3765529, z: 4.12214}
   m_Center: {x: -0.067599304, y: -0.08038161, z: -0.0017278834}
+--- !u!114 &524035246 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8423405213751773975, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
+  m_PrefabInstance: {fileID: 2004614906}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58042ebd0b68954d9673de67e135026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FrogBlepController
 --- !u!1 &525936062
 GameObject:
   m_ObjectHideFlags: 0
@@ -80617,8 +80628,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d6ce2d0b6839b49a021d7477d09098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialDirector
-  player: {fileID: 0}
-  blep: {fileID: 0}
+  player: {fileID: 2004614907}
+  blep: {fileID: 524035246}
   trail: {fileID: 665655876}
   tuna: {fileID: 2100062122}
   grimoireHighlight: {fileID: 0}
