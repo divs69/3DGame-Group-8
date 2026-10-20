@@ -90430,7 +90430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CaveTrigger
   Cavetrigger: {fileID: 2128254785}
   playerTransform: {fileID: 1102892078}
-  targetSpawnPoint: {x: 1005.2, y: 173.1, z: 825.3}
+  targetSpawnPoint: {x: 1609.4, y: 271.8, z: 490.8}
 --- !u!1 &2133278800
 GameObject:
   m_ObjectHideFlags: 0
