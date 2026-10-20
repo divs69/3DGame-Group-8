@@ -19,6 +19,9 @@ public class FrogBlepController : MonoBehaviour
     private HoverHighlight currentHighlightedItem;
     public bool IsAimingAtCollectable => currentHighlightedItem != null;
 
+
+    public ObjectTrackerData objectTrackerData;
+
     private void Update()
     {
         if (GameManager.instance != null && GameManager.instance.IsPaused)
@@ -30,6 +33,9 @@ public class FrogBlepController : MonoBehaviour
         {
             StartCoroutine(PerformBlep());
         }
+
+        //adding example
+        //objectTrackerData.AddCollectedObjectName(gameObject.name);
     }
 
     private void CheckForAimHighlight()

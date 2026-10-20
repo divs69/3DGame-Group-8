@@ -18,7 +18,8 @@ public class Settings : MonoBehaviour
     {
         ResumeButton.onClick.AddListener(HideSettingsPanel);
         if (SettingsButton != null) SettingsButton.onClick.AddListener(DisplaySettingsPanel);
-        QuitButton.onClick.AddListener(QuitGame);
+        QuitButton.onClick.AddListener(QuitGame);  
+        // add the function for the grim
 
         // Load saved volume settings
         float savedVolume = PlayerPrefs.GetFloat("GameVolume", 1f);
@@ -34,7 +35,7 @@ public class Settings : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))  // do here Nash
         {
             if (IsPaused)
                 HideSettingsPanel();

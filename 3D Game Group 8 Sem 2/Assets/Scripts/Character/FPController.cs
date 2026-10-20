@@ -27,6 +27,20 @@ public class FPController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
+
+    void Start()
+    {
+        // Check if a transition position was set
+        if (PlayerPositionTransfer.UseCustomPosition)
+        {
+            // Move the player to the saved coordinates
+            transform.position = PlayerPositionTransfer.NextSpawnPosition;
+
+            // Reset the flag so it doesn't accidentally trigger again
+            PlayerPositionTransfer.UseCustomPosition = false;
+        }
+    }
+
     private void Update()
     {
         

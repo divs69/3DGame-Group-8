@@ -1,12 +1,33 @@
 using UnityEngine;
 
-public class Crafting : MonoBehaviour, IInteractable
+public class Crafting : MonoBehaviour
 {
-    public void interact()
+    //public void interact()
+    //{
+    //    Inventory2.instance.ToggleInventory();
+    //    Inventory2.instance.craftingMenu.SetActive(true);
+    //}
+
+    public GameObject craftingMenu; 
+
+    private void OnTriggerEnter(Collider other)
     {
-        Inventory2.instance.ToggleInventory();
-        Inventory2.instance.craftingMenu.SetActive(true);
+        // Check if the overlapping object has the "Player" tag
+        if (other.CompareTag("Player"))
+        {
+            craftingMenu.SetActive(true);
+
+        }
     }
 
-   
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            craftingMenu.SetActive(false);
+
+        }
+    }
+
+
 }
