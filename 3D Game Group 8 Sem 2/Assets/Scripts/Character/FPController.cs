@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 public class FPController : MonoBehaviour
 {
     [Header("Movement Settings")]
@@ -44,9 +45,11 @@ public class FPController : MonoBehaviour
     private void Update()
     {
         
-        HandleMovement();
-        HandleLook();
-        
+        { 
+            HandleMovement();
+            HandleLook();
+
+        }  
     }
     public void OnMove(InputAction.CallbackContext context)
     {
