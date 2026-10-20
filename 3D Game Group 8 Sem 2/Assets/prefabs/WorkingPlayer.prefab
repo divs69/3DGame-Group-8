@@ -314,7 +314,6 @@ GameObject:
   - component: {fileID: 7138070606485350867}
   - component: {fileID: 2878992639015773870}
   - component: {fileID: 8423405213751773975}
-  - component: {fileID: 1901809704241324475}
   - component: {fileID: 7264921633738239349}
   m_Layer: 7
   m_Name: Main Camera
@@ -464,27 +463,6 @@ MonoBehaviour:
   playerCamera: {fileID: 5288888495731344792}
   tongueLine: {fileID: 7264921633738239349}
   mouthOrigin: {fileID: 8873264975939501909}
---- !u!114 &1901809704241324475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5701443139859708775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e58042ebd0b68954d9673de67e135026, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FrogBlepController
-  maxReachDistance: 15
-  extendSpeed: 15
-  retractSpeed: 17
-  collectableLayer:
-    serializedVersion: 2
-    m_Bits: 4096
-  playerCamera: {fileID: 5288888495731344792}
-  tongueLine: {fileID: 7264921633738239349}
-  mouthOrigin: {fileID: 6562550701817113605}
 --- !u!120 &7264921633738239349
 LineRenderer:
   serializedVersion: 3
