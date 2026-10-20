@@ -7,8 +7,12 @@ public class Settings : MonoBehaviour
 {
     [Header("UI Buttons & Panels")]
     public Button SettingsButton;
-    public Button ResumeButton;
+    public Image SettingsBackground;
     public GameObject SettingsPanel;
+    public GameObject Page1and2;
+    public GameObject Page3and4;
+    public Button Nextpage;
+    public Button previouspage;
     public Button QuitButton;
     public Slider VolumeSlider;
 
@@ -16,7 +20,7 @@ public class Settings : MonoBehaviour
 
     void Start()
     {
-        ResumeButton.onClick.AddListener(HideSettingsPanel);
+        //ResumeButton.onClick.AddListener(HideSettingsPanel);
         if (SettingsButton != null) SettingsButton.onClick.AddListener(DisplaySettingsPanel);
         QuitButton.onClick.AddListener(QuitGame);  
         // add the function for the grim
@@ -78,4 +82,6 @@ public class Settings : MonoBehaviour
         PlayerPrefs.SetFloat("GameVolume", volume);
         PlayerPrefs.Save();
     }
+
+
 }
