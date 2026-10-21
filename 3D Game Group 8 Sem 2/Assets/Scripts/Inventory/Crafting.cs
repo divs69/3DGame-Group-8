@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Crafting : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Crafting : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             craftingMenu.SetActive(true);
+            Debug.Log("The crafting panel opened");
 
         }
     }

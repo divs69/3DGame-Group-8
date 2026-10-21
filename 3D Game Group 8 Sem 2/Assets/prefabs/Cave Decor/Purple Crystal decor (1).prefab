@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5639232359934185524}
   - component: {fileID: 2898301662057294735}
   - component: {fileID: 2332453471989644380}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 6193708252684033473}
   - component: {fileID: 8642078305558381205}
   - component: {fileID: 1562253187177014942}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: -8800838792222734654}
   - component: {fileID: 546401580104865836}
   - component: {fileID: 8255481933527823027}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Purple Crystal decor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

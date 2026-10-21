@@ -11502,18 +11502,6 @@ PrefabInstance:
       value: Bone (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2020156409735774047, guid: a8c8e800a973e0b43a5f2002ef156378, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.0102608
-      objectReference: {fileID: 0}
-    - target: {fileID: 2020156409735774047, guid: a8c8e800a973e0b43a5f2002ef156378, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.92893094
-      objectReference: {fileID: 0}
-    - target: {fileID: 2020156409735774047, guid: a8c8e800a973e0b43a5f2002ef156378, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.0102607
-      objectReference: {fileID: 0}
-    - target: {fileID: 2020156409735774047, guid: a8c8e800a973e0b43a5f2002ef156378, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1009.0299
       objectReference: {fileID: 0}
@@ -17236,6 +17224,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 634416407}
     m_Modifications:
+    - target: {fileID: 2280101832106646402, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699954403457136654, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4971224517041849912, guid: ec069658da949b743a55da91854074d2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.46592304
@@ -17291,6 +17287,10 @@ PrefabInstance:
     - target: {fileID: 5743926742629637250, guid: ec069658da949b743a55da91854074d2, type: 3}
       propertyPath: m_Name
       value: Purple Crystal decor (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743926742629637250, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27420,18 +27420,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 634416407}
     m_Modifications:
     - target: {fileID: 4971224517041849912, guid: ec069658da949b743a55da91854074d2, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.46592304
-      objectReference: {fileID: 0}
-    - target: {fileID: 4971224517041849912, guid: ec069658da949b743a55da91854074d2, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.85358906
-      objectReference: {fileID: 0}
-    - target: {fileID: 4971224517041849912, guid: ec069658da949b743a55da91854074d2, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.6549693
-      objectReference: {fileID: 0}
-    - target: {fileID: 4971224517041849912, guid: ec069658da949b743a55da91854074d2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1368.9701
       objectReference: {fileID: 0}
@@ -28283,6 +28271,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 634416407}
     m_Modifications:
+    - target: {fileID: 2280101832106646402, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699954403457136654, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4971224517041849912, guid: ec069658da949b743a55da91854074d2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.3066752
@@ -28338,6 +28334,10 @@ PrefabInstance:
     - target: {fileID: 5743926742629637250, guid: ec069658da949b743a55da91854074d2, type: 3}
       propertyPath: m_Name
       value: Purple Crystal decor (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743926742629637250, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -45040,7 +45040,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 634416407}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PurpleCrystals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45125,6 +45125,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1383543394}
     m_Modifications:
+    - target: {fileID: 5674646094664738294, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_LocalScale.x
       value: 245.42175
@@ -45180,6 +45184,10 @@ PrefabInstance:
     - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_Name
       value: crystal cluster (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -50621,6 +50629,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1383543394}
     m_Modifications:
+    - target: {fileID: 5674646094664738294, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_LocalScale.x
       value: 290.2877
@@ -50676,6 +50688,10 @@ PrefabInstance:
     - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_Name
       value: crystal cluster (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -50934,6 +50950,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 798849246}
     m_Modifications:
+    - target: {fileID: 5674646094664738294, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_LocalPosition.x
       value: -76.2
@@ -50977,6 +50997,10 @@ PrefabInstance:
     - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_Name
       value: crystal cluster (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -51495,7 +51519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 798849246}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Blue Crystal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57839,6 +57863,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 798849246}
     m_Modifications:
+    - target: {fileID: 5674646094664738294, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.2
@@ -57882,6 +57910,10 @@ PrefabInstance:
     - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_Name
       value: crystal cluster (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -58116,17 +58148,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1383543394}
     m_Modifications:
-    - target: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 173.02716
-      objectReference: {fileID: 0}
-    - target: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 173.02715
-      objectReference: {fileID: 0}
-    - target: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 173.02715
+    - target: {fileID: 2689558321710873589, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: meshRenderer
+      value: 
+      objectReference: {fileID: 5372560596042648886}
+    - target: {fileID: 5674646094664738294, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_LocalPosition.x
@@ -58171,6 +58199,10 @@ PrefabInstance:
     - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_Name
       value: crystal cluster (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -70412,15 +70444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44793c453f8ceb478f9b5614f246b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Settings
-  SettingsButton: {fileID: 497129466}
-  SettingsBackground: {fileID: 0}
-  SettingsPanel: {fileID: 206285694}
-  Page1and2: {fileID: 0}
-  Page3and4: {fileID: 0}
-  Nextpage: {fileID: 0}
-  previouspage: {fileID: 0}
-  QuitButton: {fileID: 1287992105}
-  VolumeSlider: {fileID: 1452866681}
 --- !u!1 &1168828446
 GameObject:
   m_ObjectHideFlags: 0
@@ -82267,18 +82290,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 940463026}
     m_Modifications:
     - target: {fileID: 7460055143495421326, guid: 7f4ac47bab9c5ed40b3855394585aa70, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4.6550517
-      objectReference: {fileID: 0}
-    - target: {fileID: 7460055143495421326, guid: 7f4ac47bab9c5ed40b3855394585aa70, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4.6550508
-      objectReference: {fileID: 0}
-    - target: {fileID: 7460055143495421326, guid: 7f4ac47bab9c5ed40b3855394585aa70, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 4.6550517
-      objectReference: {fileID: 0}
-    - target: {fileID: 7460055143495421326, guid: 7f4ac47bab9c5ed40b3855394585aa70, type: 3}
       propertyPath: m_LocalPosition.x
       value: 231.77893
       objectReference: {fileID: 0}
@@ -82372,7 +82383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1383543394}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: crystal cluster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82807,6 +82818,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 634416407}
     m_Modifications:
+    - target: {fileID: 2280101832106646402, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699954403457136654, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4971224517041849912, guid: ec069658da949b743a55da91854074d2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.46592304
@@ -82862,6 +82881,10 @@ PrefabInstance:
     - target: {fileID: 5743926742629637250, guid: ec069658da949b743a55da91854074d2, type: 3}
       propertyPath: m_Name
       value: Purple Crystal decor (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743926742629637250, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6193708252684033473, guid: ec069658da949b743a55da91854074d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -84109,6 +84132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WorkingPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 3984478248991745112, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7264921633738239349, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
       propertyPath: m_Parameters.widthMultiplier
       value: 1.5
@@ -84413,6 +84440,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 798849246}
     m_Modifications:
+    - target: {fileID: 5674646094664738294, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_LocalPosition.x
       value: -118.8
@@ -84456,6 +84487,10 @@ PrefabInstance:
     - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_Name
       value: crystal cluster (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -84863,6 +84898,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 634416407}
     m_Modifications:
+    - target: {fileID: 2280101832106646402, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699954403457136654, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4971224517041849912, guid: ec069658da949b743a55da91854074d2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.46592304
@@ -84919,6 +84962,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Purple Crystal decor (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5743926742629637250, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -84938,8 +84985,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 634416407}
     m_Modifications:
     - target: {fileID: 2280101832106646402, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280101832106646402, guid: ec069658da949b743a55da91854074d2, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699954403457136654, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2699954403457136654, guid: ec069658da949b743a55da91854074d2, type: 3}
       propertyPath: m_IsActive
@@ -85000,6 +85055,10 @@ PrefabInstance:
     - target: {fileID: 5743926742629637250, guid: ec069658da949b743a55da91854074d2, type: 3}
       propertyPath: m_Name
       value: Purple Crystal decor (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743926742629637250, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8642078305558381205, guid: ec069658da949b743a55da91854074d2, type: 3}
       propertyPath: m_Range
@@ -90491,6 +90550,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1383543394}
     m_Modifications:
+    - target: {fileID: 5674646094664738294, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_LocalScale.x
       value: 173.02716
@@ -90546,6 +90609,10 @@ PrefabInstance:
     - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_Name
       value: crystal cluster (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -90717,18 +90784,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1767720671}
     m_Modifications:
-    - target: {fileID: 3861092087003824061, guid: 003018a7cf5e38244aa4f0e587ac78a8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3.4523578
-      objectReference: {fileID: 0}
-    - target: {fileID: 3861092087003824061, guid: 003018a7cf5e38244aa4f0e587ac78a8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3.4523578
-      objectReference: {fileID: 0}
-    - target: {fileID: 3861092087003824061, guid: 003018a7cf5e38244aa4f0e587ac78a8, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3.4523575
-      objectReference: {fileID: 0}
     - target: {fileID: 3861092087003824061, guid: 003018a7cf5e38244aa4f0e587ac78a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 335.8142
@@ -96120,6 +96175,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 798849246}
     m_Modifications:
+    - target: {fileID: 5674646094664738294, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.1
@@ -96163,6 +96222,10 @@ PrefabInstance:
     - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_Name
       value: crystal cluster (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -96779,6 +96842,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 798849246}
     m_Modifications:
+    - target: {fileID: 5674646094664738294, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_LocalPosition.x
       value: -122.6
@@ -96822,6 +96889,10 @@ PrefabInstance:
     - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_Name
       value: crystal cluster (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -101882,6 +101953,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1383543394}
     m_Modifications:
+    - target: {fileID: 5674646094664738294, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_LocalScale.x
       value: 173.02716
@@ -101937,6 +102012,10 @@ PrefabInstance:
     - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_Name
       value: crystal cluster
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -102246,6 +102325,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 634416407}
     m_Modifications:
+    - target: {fileID: 2280101832106646402, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699954403457136654, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4971224517041849912, guid: ec069658da949b743a55da91854074d2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.46592304
@@ -102301,6 +102388,10 @@ PrefabInstance:
     - target: {fileID: 5743926742629637250, guid: ec069658da949b743a55da91854074d2, type: 3}
       propertyPath: m_Name
       value: Purple Crystal decor (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743926742629637250, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -107866,6 +107957,10 @@ PrefabInstance:
       propertyPath: meshRenderer
       value: 
       objectReference: {fileID: 1816115146}
+    - target: {fileID: 5674646094664738294, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_LocalPosition.x
       value: -584.09375
@@ -107909,6 +108004,10 @@ PrefabInstance:
     - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_Name
       value: crystal cluster (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -113531,6 +113630,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 798849246}
     m_Modifications:
+    - target: {fileID: 5674646094664738294, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_LocalPosition.x
       value: -99.6
@@ -113574,6 +113677,10 @@ PrefabInstance:
     - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_Name
       value: crystal cluster (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -120124,6 +120231,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1383543394}
     m_Modifications:
+    - target: {fileID: 5674646094664738294, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_LocalScale.x
       value: 173.02716
@@ -120179,6 +120290,10 @@ PrefabInstance:
     - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_Name
       value: crystal cluster (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -120369,6 +120484,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 634416407}
     m_Modifications:
+    - target: {fileID: 2280101832106646402, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699954403457136654, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4971224517041849912, guid: ec069658da949b743a55da91854074d2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.46592304
@@ -120424,6 +120547,10 @@ PrefabInstance:
     - target: {fileID: 5743926742629637250, guid: ec069658da949b743a55da91854074d2, type: 3}
       propertyPath: m_Name
       value: Purple Crystal decor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743926742629637250, guid: ec069658da949b743a55da91854074d2, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -120540,6 +120667,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 798849246}
     m_Modifications:
+    - target: {fileID: 5674646094664738294, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.1
@@ -120584,6 +120715,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: crystal cluster
       objectReference: {fileID: 0}
+    - target: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -120592,6 +120727,11 @@ PrefabInstance:
 --- !u!4 &5372560596042648885 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8442446848071610883, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
+  m_PrefabInstance: {fileID: 5372560596042648884}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &5372560596042648886 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7305599943147997548, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
   m_PrefabInstance: {fileID: 5372560596042648884}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5483331678361825198
