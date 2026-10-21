@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     public bool isPaused;
     public Slider VolumeSlider;
 
+    public FPController FPControllerScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,7 +40,13 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         isPaused = true;
 
-       
+        // Disable mouse look script
+        if (FPControllerScript != null)
+        {
+            FPControllerScript.enabled = false;
+        }
+
+        Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
     }
@@ -50,7 +57,13 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
 
-       
+        // re enable mouse look script
+        if (FPControllerScript != null)
+        {
+            FPControllerScript.enabled = true;
+        }
+
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
