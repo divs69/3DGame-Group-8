@@ -23266,6 +23266,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 931359047}
   isPaused: 0
   VolumeSlider: {fileID: 752815611}
+  FPControllerScript: {fileID: 2004614909}
 --- !u!1 &650235134
 GameObject:
   m_ObjectHideFlags: 0
@@ -85974,6 +85975,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 227941545973866703, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
   m_PrefabInstance: {fileID: 2004614906}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2004614909 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3867649169654428354, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
+  m_PrefabInstance: {fileID: 2004614906}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b343cf188a6692419317d8bfd095ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &2006136937
 GameObject:
   m_ObjectHideFlags: 0
