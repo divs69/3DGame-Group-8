@@ -23217,7 +23217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 288940b61e0cf5c46b8b608989d42aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactor
-  interactRange: 5
+  interactRange: 3.69
   interactUI: {fileID: 1538232473}
 --- !u!1 &649975996
 GameObject:
@@ -80545,19 +80545,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9e5be1962bc2814a8ee6f05f11a5ded, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.10023922
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9e5be1962bc2814a8ee6f05f11a5ded, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7037965
+      value: -0.57
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9e5be1962bc2814a8ee6f05f11a5ded, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.13806422
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9e5be1962bc2814a8ee6f05f11a5ded, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.85632527
+      value: 0.32536313
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9e5be1962bc2814a8ee6f05f11a5ded, type: 3}
       propertyPath: m_LocalRotation.x
@@ -80565,7 +80565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9e5be1962bc2814a8ee6f05f11a5ded, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.51643693
+      value: 0.9455892
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9e5be1962bc2814a8ee6f05f11a5ded, type: 3}
       propertyPath: m_LocalRotation.z
@@ -80577,7 +80577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9e5be1962bc2814a8ee6f05f11a5ded, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -85.944
+      value: 142.025
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9e5be1962bc2814a8ee6f05f11a5ded, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -85936,19 +85936,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5954790639748710973, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5110387
+      value: 0.51071584
+      objectReference: {fileID: 0}
+    - target: {fileID: 5954790639748710973, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.01814693
       objectReference: {fileID: 0}
     - target: {fileID: 5954790639748710973, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.8595577
+      value: -0.85901594
+      objectReference: {fileID: 0}
+    - target: {fileID: 5954790639748710973, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.03052285
+      objectReference: {fileID: 0}
+    - target: {fileID: 5954790639748710973, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 4.07
       objectReference: {fileID: 0}
     - target: {fileID: 5954790639748710973, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -118.534
       objectReference: {fileID: 0}
     - target: {fileID: 6412682105833288862, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
+      propertyPath: m_Height
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412682105833288862, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
       propertyPath: m_Radius
       value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412682105833288862, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
+      propertyPath: m_Center.y
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7003960707341536503, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
       propertyPath: interactUI
@@ -88618,8 +88638,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
+  m_Height: 1.56
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!136 &2100062124
@@ -91255,7 +91275,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8284782148043564095, guid: fbc0314030c3aaf4e9e55f67411d31fa, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4654044177208952919, guid: fbc0314030c3aaf4e9e55f67411d31fa, type: 3}
       insertIndex: -1
