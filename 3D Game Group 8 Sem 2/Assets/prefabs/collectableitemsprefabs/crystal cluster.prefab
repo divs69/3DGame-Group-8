@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3072668875056156050}
   - component: {fileID: 2825692433114354254}
   - component: {fileID: 8099232864237236579}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,15 +149,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db30a0fb2fc921740a645853161f492e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -674.8838
+      value: -649.40375
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db30a0fb2fc921740a645853161f492e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 41.970276
+      value: -11.164719
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db30a0fb2fc921740a645853161f492e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -131.6034
+      value: -128.71338
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db30a0fb2fc921740a645853161f492e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: crystal cluster
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: db30a0fb2fc921740a645853161f492e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -211,7 +215,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: db30a0fb2fc921740a645853161f492e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7997166727897804868}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: db30a0fb2fc921740a645853161f492e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 657932445759171318}
   m_SourcePrefab: {fileID: 100100000, guid: db30a0fb2fc921740a645853161f492e, type: 3}
+--- !u!23 &7305599943147997548 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: db30a0fb2fc921740a645853161f492e, type: 3}
+  m_PrefabInstance: {fileID: 8260483322402166248}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8442446848071610883 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: db30a0fb2fc921740a645853161f492e, type: 3}
@@ -257,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoverHighlight
   floatingCanvas: {fileID: 0}
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 7305599943147997548}
   glowColor: {r: 1, g: 1, b: 0.19215687, a: 1}
 --- !u!114 &7997166727897804868
 MonoBehaviour:
@@ -272,3 +284,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
   data: {fileID: 11400000, guid: c6ac46deb69bbe14789bcf88afdcc846, type: 2}
+--- !u!65 &657932445759171318
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9106920566649841849}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.21402797, y: 0.17011614, z: 0.08588301}
+  m_Center: {x: 0.030350694, y: 0.032868415, z: 0.03159166}

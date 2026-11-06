@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public interface IInteractable
 {
@@ -24,7 +25,7 @@ public class interactor : MonoBehaviour
     {
         DetectInteractable();
 
-        if (currentInteractable != null && Input.GetKeyDown(KeyCode.E))
+        if (currentInteractable != null && Keyboard.current.eKey.wasPressedThisFrame)
         {
             currentInteractable.interact();
         }
