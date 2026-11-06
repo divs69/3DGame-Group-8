@@ -264,7 +264,7 @@ public class Inventory2 : MonoBehaviour
             {
                 Additem(ingredient.ingredient, ingredient.amount);
                 Destroy(ingredient.gameObject);
-
+                Debug.Log("picked up item");
             }
         }
     }

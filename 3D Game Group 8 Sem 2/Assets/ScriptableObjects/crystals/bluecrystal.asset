@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: bluecrystal
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   itemName: Valennoria Crystal
-  itemIcon: {fileID: -323937155, guid: f38181c6d00039d4795338f9ac1fd842, type: 3}
+  itemIcon: {fileID: 21300000, guid: 28f99e3806ea3264cb56e27f304a697d, type: 3}
   description: Increases your reach when mixed in a potion.
   itemPrefab: {fileID: 9106920566649841849, guid: 335719222ec35804ba51fcec7e75bf12, type: 3}
   maxStackSize: 50
