@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: purplecrystal
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   itemName: Rhaedos Crystal
-  itemIcon: {fileID: 999080818, guid: baf4676bfbd335a44818bdc7dba12706, type: 3}
+  itemIcon: {fileID: -479251149, guid: 6258f85af501b1b479cb02166e4a7455, type: 3}
   description: "its a Purple Crystal. \nYour Speed increases when mixed in a potion."
   itemPrefab: {fileID: 4688858738268670841, guid: 84297cd25acebb742b8c30ad5337a794, type: 3}
   maxStackSize: 50
