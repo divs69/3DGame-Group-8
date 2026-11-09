@@ -7,8 +7,13 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
-    public bool isPaused;
-    public Slider VolumeSlider;
+    private bool isPaused;
+    private Slider VolumeSlider;
+    public Button nextbutton;
+    public Button prevbutton;
+    public Button booktab;
+    public GameObject page1and2;
+    public GameObject page3and4;
 
     public FPController FPControllerScript;
 
@@ -16,6 +21,9 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         pauseMenu.SetActive(false);
+        nextbutton.onClick.AddListener(NextPage);
+        prevbutton.onClick.AddListener(PreviousPage);
+        booktab.onClick.AddListener(QuitGame);
     }
 
     // Update is called once per frame
@@ -65,6 +73,19 @@ public class PauseMenu : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    public void NextPage()
+    {
+        page1and2.SetActive(false);
+        page3and4.SetActive(true);
+        Debug.Log("the next button was pressed");
+    }
+
+    public void PreviousPage()
+    {
+        page1and2.SetActive(true);
+        page3and4.SetActive(false);
     }
 
     public void GoToMainMenu()
