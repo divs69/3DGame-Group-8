@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -21,24 +22,41 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         pauseMenu.SetActive(false);
+        page3and4.SetActive(false);
         nextbutton.onClick.AddListener(NextPage);
         prevbutton.onClick.AddListener(PreviousPage);
         booktab.onClick.AddListener(QuitGame);
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
-            { 
-                ResumeGame(); 
+            {
+                ResumeGame();
             }
             else
-            { 
-                PauseGame(); 
-            }    
+            {
+                PauseGame();
+            }
+        }
+
+        if (Keyboard.current.dKey.wasPressedThisFrame)
+        {
+            page1and2.SetActive(false);
+            page3and4.SetActive(true);
+            Debug.Log("the next button was pressed");
+        }
+
+        if (Keyboard.current.aKey.wasPressedThisFrame)
+        {
+            page1and2.SetActive(true);
+            page3and4.SetActive(false);
+            Debug.Log("the previous button was pressed");
         }
     }
 
@@ -80,12 +98,14 @@ public class PauseMenu : MonoBehaviour
         page1and2.SetActive(false);
         page3and4.SetActive(true);
         Debug.Log("the next button was pressed");
+
     }
 
     public void PreviousPage()
     {
         page1and2.SetActive(true);
         page3and4.SetActive(false);
+        Debug.Log("the previous button was pressed");
     }
 
     public void GoToMainMenu()
