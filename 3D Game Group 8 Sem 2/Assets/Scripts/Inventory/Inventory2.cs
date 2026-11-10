@@ -252,6 +252,7 @@ public class Inventory2 : MonoBehaviour
         if (isDragging)
         {
             dragIcon.transform.position = Input.mousePosition;
+            Debug.Log("I shake my booty");
         }
     }
 

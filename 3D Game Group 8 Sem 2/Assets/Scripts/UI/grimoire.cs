@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class grimoiretest : MonoBehaviour
+public class grimoire : MonoBehaviour
 {
     [SerializeField] private string playerTag = "WorkingPlayer";
 
