@@ -30,6 +30,11 @@ public class PauseMenu : MonoBehaviour
     public Button booktab;
     public GameObject page1and2;
     public GameObject page3and4;
+    public Button resumebutton;
+    public Button mainmenu;
+    public Button quit;
+    public Slider volumeslider;
+
 
     public FPController FPControllerScript;
 
@@ -40,8 +45,13 @@ public class PauseMenu : MonoBehaviour
         page3and4.SetActive(false);
         nextbutton.onClick.AddListener(NextPage);
         prevbutton.onClick.AddListener(PreviousPage);
-
-
+        resumebutton.onClick.AddListener(ResumeGame);
+        mainmenu.onClick.AddListener(GoToMainMenu);
+        quit.onClick.AddListener(QuitGame);
+        float savedVolume = PlayerPrefs.GetFloat("GameVolume", 1f);
+        AudioListener.volume = savedVolume;
+        volumeslider.value = savedVolume;
+        volumeslider.onValueChanged.AddListener(ChangeVolume);
     }
 
     // Update is called once per frame
@@ -126,6 +136,13 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+    }
+    public void ChangeVolume(float volume)
+    {
+        AudioListener.volume = volume;
+
+        PlayerPrefs.SetFloat("GameVolume", volume);
+        PlayerPrefs.Save();
     }
 
     public void QuitGame()

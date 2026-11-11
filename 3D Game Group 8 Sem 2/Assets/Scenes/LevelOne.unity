@@ -122525,6 +122525,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44793c453f8ceb478f9b5614f246b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Settings
+  SettingsButton: {fileID: 0}
+  ResumeButton: {fileID: 0}
+  SettingsPanel: {fileID: 0}
+  QuitButton: {fileID: 0}
+  VolumeSlider: {fileID: 0}
 --- !u!1 &1168828446
 GameObject:
   m_ObjectHideFlags: 0
@@ -214277,7 +214282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2006136938
 Transform:
   m_ObjectHideFlags: 0
@@ -227834,6 +227839,10 @@ MonoBehaviour:
   booktab: {fileID: 4333129990260052414}
   page1and2: {fileID: 5530025323387009267}
   page3and4: {fileID: 6001568915563364886}
+  resumebutton: {fileID: 4397713782892666807}
+  mainmenu: {fileID: 1757899788848603824}
+  quit: {fileID: 1570699341166051655}
+  volumeslider: {fileID: 8899011063613854349}
   FPControllerScript: {fileID: 2004614909}
 --- !u!114 &1570699341166051655
 MonoBehaviour:
