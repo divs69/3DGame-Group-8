@@ -95,7 +95,7 @@ public class TutorialDirector : MonoBehaviour
 
         // ---- 1. MIRROR ----
         Step("1: Mirror");
-        yield return Dlg.Say("Petunia", "First day on the job! I should head downstairs and see what Tuna is up to.", 3.5f);
+        yield return Dlg.Say("Petunia", "First day on the job! I should head downstairs and see what Tuna is up to.", 2.5f);
         Dlg.Hide();
         Ui.SetHint("WASD to move");
         yield return new WaitUntil(() => Input.GetAxis("Horizontal") != 0f || Input.GetAxis("Vertical") != 0f);
@@ -106,7 +106,7 @@ public class TutorialDirector : MonoBehaviour
         Step("2: Tuna Intro + Grimoire");
         yield return WaitUntilNear(tuna.transform, talkDistance);
         yield return Dlg.Say("Tuna", "Hey Petunia! Are you excited to get started?");
-        yield return Dlg.Say("Tuna", "First, grab your grimoire off the table. It's where all your potion recipes live!");
+        yield return Dlg.Say("Tuna", "First, press E to grab your grimoire off the table. It's where all your potion recipes live!");
         Dlg.Hide();
 
         Highlight(grimoireHighlight, true);

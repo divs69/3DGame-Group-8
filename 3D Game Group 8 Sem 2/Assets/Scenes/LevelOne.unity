@@ -27630,13 +27630,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188417922}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 177.8512, y: 3.352295, z: 87.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1732164910}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &199315169
 GameObject:
   m_ObjectHideFlags: 0
@@ -126814,6 +126814,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44793c453f8ceb478f9b5614f246b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Settings
+  SettingsButton: {fileID: 0}
+  ResumeButton: {fileID: 0}
+  SettingsPanel: {fileID: 0}
+  QuitButton: {fileID: 0}
+  VolumeSlider: {fileID: 0}
 --- !u!1 &1168828446
 GameObject:
   m_ObjectHideFlags: 0
@@ -176076,7 +176081,7 @@ MonoBehaviour:
   caveEntrance: {fileID: 2128254785}
   runEvenIfCompleted: 0
   skipCraftingLesson: 0
-  talkDistance: 20
+  talkDistance: 30
   markerDistance: 10
   ingredientsToCollect: 3
   grimoireOpenHint: Press ESC to open your grimoire
@@ -186288,6 +186293,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 79262fc4013b6654c8629480ee6220b2, type: 3}
   m_PrefabInstance: {fileID: 1852840232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1853024810 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: d9e5be1962bc2814a8ee6f05f11a5ded, type: 3}
+  m_PrefabInstance: {fileID: 1713708337}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1857532037
 GameObject:
@@ -204685,6 +204695,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3867649169654428354, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1853024810}
     - target: {fileID: 3984478248991745112, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
       propertyPath: m_Name
       value: WorkingPlayer
@@ -213306,7 +213320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e979962a43e4334689c17ee0ba61071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuideNPC
-  player: {fileID: 0}
+  player: {fileID: 2004614907}
   waitDistance: 8
   resumeDistance: 5
   animator: {fileID: 0}
