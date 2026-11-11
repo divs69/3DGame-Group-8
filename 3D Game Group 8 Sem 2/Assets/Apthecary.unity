@@ -36037,6 +36037,7 @@ MonoBehaviour:
   playerCamera: {fileID: 735141051}
   tongueLine: {fileID: 735141052}
   mouthOrigin: {fileID: 811549489}
+  objectTrackerData: {fileID: 0}
 --- !u!1 &736566117
 GameObject:
   m_ObjectHideFlags: 0
@@ -88735,6 +88736,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apothecary Nash
       objectReference: {fileID: 0}
+    - target: {fileID: 8081206315650086435, guid: 28dc9f95a7e0ca5479f0781f6f6e4d9b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8122759743547614799, guid: 28dc9f95a7e0ca5479f0781f6f6e4d9b, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -89816,6 +89821,7 @@ MonoBehaviour:
   BeehiveItem: {fileID: 11400000, guid: 807c3d047943e8b418d79d5c379e45d7, type: 2}
   FlowerItem: {fileID: 11400000, guid: 43604da319818f7429360cd67d6a7746, type: 2}
   Flower1Item: {fileID: 11400000, guid: 7f4b0d2527d5a6b44990b751374404f8, type: 2}
+  FungusItem: {fileID: 0}
   SpeedpotiongreenItem: {fileID: 11400000, guid: cd33fd60cea88e341ad31a498f5ed072, type: 2}
   ReachpotionblueItem: {fileID: 11400000, guid: b5edf5537a42faa47b06770231e6f367, type: 2}
   JumppotionpinkItem: {fileID: 11400000, guid: 5c9f5431b4c30fd4d8e4f20d940dc038, type: 2}
@@ -94732,6 +94738,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CaveTrigger
   Cavetrigger: {fileID: 2128254785}
+  playerTransform: {fileID: 0}
+  targetSpawnPoint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2139585863
 PrefabInstance:
   m_ObjectHideFlags: 0

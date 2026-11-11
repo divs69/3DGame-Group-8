@@ -9,17 +9,15 @@ public class CollectableIngredient : MonoBehaviour, ICollectable
     [SerializeField] private IngredientData data;
 
     public IngredientData Data => data;
+    private bool collected;
 
     public void OnCollected()
     {
-        Debug.Log($"Collected: {data.itemName} via Blep!");
+        if (collected || Inventory2.instance == null || !Inventory2.instance.Additem(data, 1))
+            return;
 
-        if (Inventory2.instance != null)
-            Inventory2.instance.Additem(data, 1);
-        else
-            Debug.LogWarning("Inventory2.instance is null - did you add 'instance = this;' to Inventory2's Awake?");
-
-        if (OnAnyCollected != null) OnAnyCollected(this);
+        collected = true;
+        OnAnyCollected?.Invoke(this);
         Destroy(gameObject);
     }
 }

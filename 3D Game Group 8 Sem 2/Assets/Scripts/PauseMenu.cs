@@ -9,7 +9,22 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     private bool isPaused;
-    private Slider VolumeSlider;
+    private bool grimoireCollected;
+
+    private void OnEnable()
+    {
+        TutorialEvents.GrimoireCollected += UnlockGrimoire;
+    }
+
+    private void OnDisable()
+    {
+        TutorialEvents.GrimoireCollected -= UnlockGrimoire;
+    }
+
+    private void UnlockGrimoire()
+    {
+        grimoireCollected = true;
+    }
     public Button nextbutton;
     public Button prevbutton;
     public Button booktab;
@@ -25,7 +40,6 @@ public class PauseMenu : MonoBehaviour
         page3and4.SetActive(false);
         nextbutton.onClick.AddListener(NextPage);
         prevbutton.onClick.AddListener(PreviousPage);
-        booktab.onClick.AddListener(QuitGame);
 
 
     }
@@ -45,23 +59,23 @@ public class PauseMenu : MonoBehaviour
             }
         }
 
-        if (Keyboard.current.dKey.wasPressedThisFrame)
+        if (isPaused && Keyboard.current != null)
         {
-            page1and2.SetActive(false);
-            page3and4.SetActive(true);
-            Debug.Log("the next button was pressed");
-        }
-
-        if (Keyboard.current.aKey.wasPressedThisFrame)
-        {
-            page1and2.SetActive(true);
-            page3and4.SetActive(false);
-            Debug.Log("the previous button was pressed");
+            if (Keyboard.current.dKey.wasPressedThisFrame)
+                NextPage();
+            if (Keyboard.current.aKey.wasPressedThisFrame)
+                PreviousPage();
         }
     }
 
     public void PauseGame()
     {
+        if (!grimoireCollected || isPaused)
+            return;
+
+        if (Inventory2.instance != null && Inventory2.instance.IsOpen)
+            Inventory2.instance.SetInventoryOpen(false);
+
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;

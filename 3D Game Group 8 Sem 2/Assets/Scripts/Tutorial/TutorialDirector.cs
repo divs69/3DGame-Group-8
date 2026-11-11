@@ -95,7 +95,7 @@ public class TutorialDirector : MonoBehaviour
 
         // ---- 1. MIRROR ----
         Step("1: Mirror");
-        yield return Dlg.Say("Petunia", "First day on the job! I should head downstairs and see what Tuna is up to.", 2.5f);
+        yield return Dlg.Say("Petunia", "First day on the job! I should head downstairs and see what Tuna is up to.", 3.5f);
         Dlg.Hide();
         Ui.SetHint("WASD to move");
         yield return new WaitUntil(() => Input.GetAxis("Horizontal") != 0f || Input.GetAxis("Vertical") != 0f);
@@ -106,7 +106,7 @@ public class TutorialDirector : MonoBehaviour
         Step("2: Tuna Intro + Grimoire");
         yield return WaitUntilNear(tuna.transform, talkDistance);
         yield return Dlg.Say("Tuna", "Hey Petunia! Are you excited to get started?");
-        yield return Dlg.Say("Tuna", "First, press E to grab your grimoire off the table. It's where all your potion recipes live!");
+        yield return Dlg.Say("Tuna", "First, grab your grimoire off the table. It's where all your potion recipes live!");
         Dlg.Hide();
 
         Highlight(grimoireHighlight, true);
@@ -158,11 +158,11 @@ public class TutorialDirector : MonoBehaviour
         if (!skipCraftingLesson)
         {
             Highlight(cauldronHighlight, true);
-            Ui.SetHint("Press TAB at the cauldron to start crafting");
+            Ui.SetHint("Approach the cauldron to craft. Press TAB to reopen the menu.");
             yield return new WaitUntil(InventoryOpen);
             Highlight(cauldronHighlight, false);
 
-            Ui.SetHint("Click a the ingredients to craft your first potion");
+            Ui.SetHint("Click a potion recipe to craft your first potion.");
             yield return new WaitUntil(() => potionCrafted);
 
             Ui.SetHint("Nice! Press TAB again to close the menu");
@@ -278,7 +278,7 @@ public class TutorialDirector : MonoBehaviour
 
     bool GamePaused()
     {
-        return GameManager.instance != null && GameManager.instance.IsPaused;
+        return Time.timeScale == 0f;
     }
 
     bool InventoryOpen()

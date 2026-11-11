@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 
 
@@ -32,13 +32,14 @@ public class Inventory2 : MonoBehaviour
 
     //PickUp
     public float pickupRange;
-    private Ingredients lookedAtItem = null;
     public Material highlightMaterial;
     private Material originalMaterial;
     private Renderer lookedAtRenderer = null;
 
     private Slot draggedSlot = null;
-    private bool isDragging = false;
+    private readonly List<RaycastResult> pointerHits = new();
+    private bool nearCauldron;
+    public bool IsOpen => container.activeInHierarchy;
 
     private int equippedHotBarIndex = 0; //0 - 5 numpad keys in the hotbar
     public float equippedOpacity = 0.9f;
@@ -64,143 +65,159 @@ public class Inventory2 : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        inventorySlots.AddRange(inventorySlotParent.GetComponentsInChildren<Slot>());
-        hotbarSlots.AddRange(hotbarObj.GetComponentsInChildren<Slot>());
+        inventorySlots.AddRange(inventorySlotParent.GetComponentsInChildren<Slot>(true));
+        hotbarSlots.AddRange(hotbarObj.GetComponentsInChildren<Slot>(true));
 
         allSlots.AddRange(inventorySlots);
         allSlots.AddRange(hotbarSlots);
 
+        dragIcon.raycastTarget = false;
+        CancelDrag();
+        craftingMenu.SetActive(false);
         PopulateCraftingGrid();
     }
     void Update()
     {
 
+        if (Time.timeScale == 0f)
+            return;
+
         if (Input.GetKeyDown(KeyCode.Tab))
+            SetInventoryOpen(!IsOpen);
+
+        if (IsOpen)
         {
-
-            ToggleInventory();
-
+            StartDrag();
+            UpdateDragItemPosition();
+            EndDrag();
+            UpdateItemDescription();
+        }
+        else
+        {
+            DetectLookedAtItem();
+            Pickup();
+            HandleHotBarSelection();
+            HandleDropEquippedItem();
         }
 
-        DetectLookedAtItem();
-
-        Pickup();
-
-        StartDrag();
-        UpdateDragItemPosition();
-        EndDrag();
-
-        HandleHotBarSelection();
-        HandleDropEquippedItem();
         UpdateHotBarOpacity();
-
-        UpdateItemDescription();
     }
 
     public void ToggleInventory()
     {
-        container.SetActive(!container.activeInHierarchy);
-        Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
-        Cursor.visible = !Cursor.visible;
-
-        craftingMenu.SetActive(false);
+        if (Time.timeScale != 0f)
+            SetInventoryOpen(!IsOpen);
     }
 
-    public void Additem(IngredientData itemToAdd, int amount)
+    public void SetInventoryOpen(bool open)
     {
-        int remaining = amount;
+        CancelDrag();
+        itemdescriptionParent.SetActive(false);
+        container.SetActive(open);
+        craftingMenu.SetActive(open && nearCauldron);
+        Cursor.lockState = open ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = open;
+    }
 
-        //try to fill existing stacks first
-        foreach (Slot slot in allSlots)
-        {
-            if (slot.HasItem() && slot.GetItem() == itemToAdd)
-            {
-                int currentAmount = slot.GetAmount();
-                int maxStack = itemToAdd.maxStackSize;
+    public void SetCauldronInRange(bool inRange)
+    {
+        nearCauldron = inRange;
+        if (inRange && Time.timeScale != 0f)
+            SetInventoryOpen(true);
+        else
+            craftingMenu.SetActive(false);
+    }
 
-                if (currentAmount < maxStack)
-                {
-                    int spaceLeft = maxStack - currentAmount;
-                    int amountToAdd = Mathf.Min(spaceLeft, remaining);
+    public bool Additem(IngredientData itemToAdd, int amount)
+    {
+        if (itemToAdd == null || amount <= 0)
+            return false;
 
-                    slot.SetItem(itemToAdd, currentAmount + amountToAdd);
-                    remaining -= amountToAdd;
-
-                    if (remaining <= 0)
-                    {
-                        PopulateCraftingGrid();
-                        return; // done adding everything
-                    }
-                    
-                }
-            }
-        }
-
-        //if items remian,put them in empty slots 
+        int freeSlots = 0;
         foreach (Slot slot in allSlots)
         {
             if (!slot.HasItem())
-            {
-                int amountToPlace = Mathf.Min(itemToAdd.maxStackSize, remaining);
-                slot.SetItem(itemToAdd, amountToPlace);
-                remaining -= amountToPlace;
-
-                if (remaining <= 0)
-                    PopulateCraftingGrid();
-                return; // done adding everything
-            }
+                freeSlots++;
         }
 
-        if (remaining > 0)
+        if (freeSlots < amount)
+            return false;
+
+        foreach (Slot slot in allSlots)
         {
-            Debug.Log("inventory is full, could not add item" + remaining + "of" + itemToAdd.itemName);
+            if (slot.HasItem())
+                continue;
+
+            slot.SetItem(itemToAdd);
+            if (--amount == 0)
+                break;
         }
-        PopulateCraftingGrid();
+
+        RefreshCraftingButtons();
+        return true;
     }
 
     private void StartDrag()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Slot hovered = GetHoveredSlot();
+        if (!Input.GetMouseButtonDown(0))
+            return;
 
-            if (hovered != null && hovered.HasItem())
-            {
-                draggedSlot = hovered;
-                isDragging = true;
+        Slot hovered = GetPointerSlot();
+        if (hovered == null || !hovered.HasItem())
+            return;
 
-                //show drag item
-                dragIcon.sprite = hovered.GetItem().itemIcon;
-                dragIcon.color = new Color(1, 1, 1, 0.5f);
-                dragIcon.enabled = true;
-
-            }
-        }
+        draggedSlot = hovered;
+        dragIcon.sprite = hovered.GetItem().itemIcon;
+        dragIcon.color = new Color(1, 1, 1, 0.5f);
+        dragIcon.enabled = true;
     }
 
     private void EndDrag()
     {
-        if (Input.GetMouseButtonUp(0) && isDragging)
+        if (Input.GetMouseButtonUp(0) && draggedSlot != null)
         {
-            Slot hovered = GetHoveredSlot();
+            Slot hovered = GetPointerSlot();
 
             if (hovered != null)
-            {
                 HandleDrop(draggedSlot, hovered);
 
-                dragIcon.enabled = false;
-
-                draggedSlot = null;
-                isDragging = false;
-            }
+            CancelDrag();
         }
+    }
+
+    private void CancelDrag()
+    {
+        draggedSlot = null;
+        dragIcon.enabled = false;
+        dragIcon.sprite = null;
+    }
+
+    private void OnApplicationFocus(bool focused)
+    {
+        if (!focused)
+            CancelDrag();
+    }
+
+    private Slot GetPointerSlot()
+    {
+        EventSystem eventSystem = EventSystem.current;
+        if (eventSystem == null)
+            return null;
+
+        var pointer = new PointerEventData(eventSystem) { position = Input.mousePosition };
+        eventSystem.RaycastAll(pointer, pointerHits);
+        if (pointerHits.Count == 0)
+            return null;
+
+        Slot slot = pointerHits[0].gameObject.GetComponentInParent<Slot>();
+        return slot != null && slot.isActiveAndEnabled && allSlots.Contains(slot) ? slot : null;
     }
 
     private Slot GetHoveredSlot()
     {
         foreach (Slot s in allSlots)
         {
-            if (s.hovering)
+            if (s.isActiveAndEnabled && s.hovering)
                 return s;
         }
 
@@ -210,25 +227,6 @@ public class Inventory2 : MonoBehaviour
     private void HandleDrop(Slot from, Slot to)
     {
         if (from == to) return;
-
-        //Stacking
-        if (to.HasItem() && to.GetItem() == from.GetItem())
-        {
-            int max = to.GetItem().maxStackSize;
-            int space = max - to.GetAmount();
-
-            if (space > 0)
-            {
-                int move = Mathf.Min(space, from.GetAmount());
-                to.SetItem(to.GetItem(), to.GetAmount() + move);
-                from.SetItem(from.GetItem(), from.GetAmount() - move);
-
-                if (from.GetAmount() <= 0)
-                    from.ClearSlot();
-
-                return;
-            }
-        }
 
         //Different item
         if (to.HasItem())
@@ -249,10 +247,9 @@ public class Inventory2 : MonoBehaviour
 
     private void UpdateDragItemPosition()
     {
-        if (isDragging)
+        if (draggedSlot != null)
         {
             dragIcon.transform.position = Input.mousePosition;
-            Debug.Log("I shake my booty");
         }
     }
 
@@ -261,9 +258,9 @@ public class Inventory2 : MonoBehaviour
         if (lookedAtRenderer != null && Input.GetKeyDown(KeyCode.E))
         {
             Ingredients ingredient = lookedAtRenderer.GetComponent<Ingredients>();
-            if (ingredient != null)
+            if (ingredient != null && !ingredient.TryGetComponent<ICollectable>(out _) &&
+                Additem(ingredient.ingredient, ingredient.amount))
             {
-                Additem(ingredient.ingredient, ingredient.amount);
                 Destroy(ingredient.gameObject);
                 Debug.Log("picked up item");
             }
@@ -311,7 +308,7 @@ public class Inventory2 : MonoBehaviour
 
     private void HandleHotBarSelection()
     {
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < Mathf.Min(6, hotbarSlots.Count); i++)
         {
             if (Input.GetKeyDown((i + 1).ToString()))
             {
@@ -324,7 +321,7 @@ public class Inventory2 : MonoBehaviour
 
     private void HandleDropEquippedItem()
     {
-        if(!Input.GetKeyDown(KeyCode.Q))  return;
+        if (!Input.GetKeyDown(KeyCode.Q) || equippedHotBarIndex >= hotbarSlots.Count) return;
 
         Slot equippedSlot = hotbarSlots[equippedHotBarIndex];
 
@@ -344,7 +341,7 @@ public class Inventory2 : MonoBehaviour
 
         equippedSlot.ClearSlot(); // remove
 
-        PopulateCraftingGrid();
+        RefreshCraftingButtons();
     }
 
     private void UpdateItemDescription()
@@ -363,8 +360,16 @@ public class Inventory2 : MonoBehaviour
                 descriptionitemNameTxt.text = hoveredItem.name;
                 return;
             }
-            itemdescriptionParent.SetActive(false);
         }
+        itemdescriptionParent.SetActive(false);
+    }
+
+    private readonly List<(Button button, Recipes recipe)> craftingButtons = new();
+
+    private void RefreshCraftingButtons()
+    {
+        foreach (var (button, recipe) in craftingButtons)
+            button.interactable = CanCraft(recipe);
     }
 
     private void PopulateCraftingGrid()
@@ -383,8 +388,8 @@ public class Inventory2 : MonoBehaviour
 
             Button btn = btnObj.GetComponent<Button>();
 
+            craftingButtons.Add((btn, recipes));
             btn.interactable = CanCraft(recipes);
-            btn.onClick.RemoveAllListeners();
             btn.onClick.AddListener(() => Craft(recipes));
 
             foreach (Elements elements in recipes.elements)
@@ -398,7 +403,7 @@ public class Inventory2 : MonoBehaviour
 
     public void Craft(Recipes recipes)
     {
-        if (!CanCraft(recipes))
+        if (!IsOpen || !nearCauldron || !CanCraft(recipes))
         {
             return;
         }
@@ -406,7 +411,6 @@ public class Inventory2 : MonoBehaviour
         ConsumeElements(recipes);
         Additem(recipes.result, recipes.resultAmount);
         TutorialEvents.PotionCrafted?.Invoke();
-        PopulateCraftingGrid();
     }
 
     private void ConsumeElements(Recipes recipes)
@@ -421,10 +425,7 @@ public class Inventory2 : MonoBehaviour
                 if (slot.GetItem() != elements.ingredient) continue;
 
                 int take = Mathf.Min(slot.GetAmount(), remaining);
-                slot.SetItem(slot.GetItem(), slot.GetAmount() - take);
-
-                if(slot.GetAmount() <= 0)
-                    slot.ClearSlot();
+                slot.RemoveAmount(take);
 
                 remaining -= take;
                 if (remaining <= 0)
@@ -439,24 +440,45 @@ public class Inventory2 : MonoBehaviour
 
     public bool CanCraft(Recipes recipes)
     {
+        if (recipes == null || recipes.result == null || recipes.resultAmount <= 0)
+            return false;
+
+        var needed = new Dictionary<IngredientData, int>();
         foreach (Elements elements in recipes.elements)
         {
-            int totalFound = 0;
-
-            foreach (Slot slot in allSlots)
-            {
-                if(slot.HasItem() && slot.GetItem() == elements.ingredient)
-                {
-                    totalFound += slot.GetAmount();
-
-                }
-            }
-
-            if(totalFound < elements.amount)
+            if (elements.ingredient == null || elements.amount <= 0)
                 return false;
 
+            needed.TryGetValue(elements.ingredient, out int amount);
+            needed[elements.ingredient] = amount + elements.amount;
         }
-        return true;
 
+        int freeSlots = 0;
+        foreach (Slot slot in allSlots)
+        {
+            if (!slot.HasItem())
+            {
+                freeSlots++;
+                continue;
+            }
+
+            IngredientData item = slot.GetItem();
+            if (!needed.TryGetValue(item, out int remaining))
+                continue;
+
+            int consumed = Mathf.Min(remaining, slot.GetAmount());
+            if (consumed == slot.GetAmount())
+                freeSlots++;
+
+            needed[item] = remaining - consumed;
+        }
+
+        foreach (int remaining in needed.Values)
+        {
+            if (remaining > 0)
+                return false;
+        }
+
+        return freeSlots >= recipes.resultAmount;
     }
 }

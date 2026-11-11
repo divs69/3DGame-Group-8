@@ -34,10 +34,7 @@ public class grimoire : MonoBehaviour
 
     private void PickUp()
     {
-        Debug.Log("the grimoire was picked up");
-
         TutorialEvents.GrimoireCollected?.Invoke();
-
         Destroy(gameObject);
     }
 }

@@ -97,6 +97,11 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         return helditem != null;
     }
 
+    private void OnDisable()
+    {
+        hovering = false;
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
        hovering = true;

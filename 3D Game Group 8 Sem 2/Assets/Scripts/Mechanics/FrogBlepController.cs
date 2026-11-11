@@ -24,7 +24,7 @@ public class FrogBlepController : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.instance != null && GameManager.instance.IsPaused)
+        if (Time.timeScale == 0f || (Inventory2.instance != null && Inventory2.instance.IsOpen))
             return;
 
         CheckForAimHighlight();

@@ -1,35 +1,29 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Crafting : MonoBehaviour
 {
-    //public void interact()
-    //{
-    //    Inventory2.instance.ToggleInventory();
-    //    Inventory2.instance.craftingMenu.SetActive(true);
-    //}
-
-    public GameObject craftingMenu; 
+    private readonly HashSet<Collider> playersInRange = new();
 
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the overlapping object has the "Player" tag
-        if (other.CompareTag("Player"))
+        if (other.GetComponentInParent<FPController>() != null &&
+            playersInRange.Add(other) && playersInRange.Count == 1)
         {
-            craftingMenu.SetActive(true);
-            Debug.Log("The crafting panel opened");
-
+            Inventory2.instance?.SetCauldronInRange(true);
         }
     }
 
-    public void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            craftingMenu.SetActive(false);
-
-        }
+        if (playersInRange.Remove(other) && playersInRange.Count == 0)
+            Inventory2.instance?.SetCauldronInRange(false);
     }
 
-
+    private void OnDisable()
+    {
+        if (playersInRange.Count > 0 && Inventory2.instance != null)
+            Inventory2.instance.SetCauldronInRange(false);
+        playersInRange.Clear();
+    }
 }
