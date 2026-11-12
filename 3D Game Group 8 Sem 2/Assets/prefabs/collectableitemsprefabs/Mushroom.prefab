@@ -4858,15 +4858,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8215717b7804d0f45b01ee5173b7d06b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 863.67
+      value: 757.67
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8215717b7804d0f45b01ee5173b7d06b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 165.60002
+      value: 180.10002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8215717b7804d0f45b01ee5173b7d06b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 505.17786
+      value: 278.07788
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8215717b7804d0f45b01ee5173b7d06b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4927,6 +4927,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8215717b7804d0f45b01ee5173b7d06b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1693581382216137486}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8215717b7804d0f45b01ee5173b7d06b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4553234608647534184}
   m_SourcePrefab: {fileID: 100100000, guid: 8215717b7804d0f45b01ee5173b7d06b, type: 3}
 --- !u!4 &5077697653245324299 stripped
 Transform:
@@ -5009,6 +5012,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectableIngredient
   data: {fileID: 11400000, guid: 7f4b0d2527d5a6b44990b751374404f8, type: 2}
+--- !u!54 &4553234608647534184
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5565406460826220209}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!23 &6214043622444783460 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 8215717b7804d0f45b01ee5173b7d06b, type: 3}

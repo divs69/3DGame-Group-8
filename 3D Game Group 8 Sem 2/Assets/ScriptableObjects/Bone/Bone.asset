@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bone
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   itemName: Bone
-  itemIcon: {fileID: -1095577315, guid: f92943504eb08a248978860214dd6f43, type: 3}
+  itemIcon: {fileID: -23610446, guid: c90d631368836fd4392b6eadccd139a0, type: 3}
   description: bonesssssssss
   itemPrefab: {fileID: 1676140750107518437, guid: a8c8e800a973e0b43a5f2002ef156378, type: 3}
   maxStackSize: 50

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI; //important
 
-//if you use this code you are contractually obligated to like the YT video
-public class gnome_movement : MonoBehaviour //don't forget to change the script name if you haven't
+
+public class gnome_movement : MonoBehaviour 
 {
     public NavMeshAgent agent;
     public float range; //radius of sphere
@@ -36,7 +36,7 @@ public class gnome_movement : MonoBehaviour //don't forget to change the script 
 
         Vector3 randomPoint = center + Random.insideUnitSphere * range; //random point in a sphere 
         NavMeshHit hit;
-        if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas)) //documentation: https://docs.unity3d.com/ScriptReference/AI.NavMesh.SamplePosition.html
+        if (NavMesh.SamplePosition(randomPoint, out hit, 5.0f, NavMesh.AllAreas))
         {
             //the 1.0f is the max distance from the random point to a point on the navmesh, might want to increase if range is big
             //or add a for loop like in the documentation

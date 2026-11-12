@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: Reachrecipe
   m_EditorClassIdentifier: Assembly-CSharp::Recipes
   elements:
-  - ingredient: {fileID: 11400000, guid: 06d3983f09ff3ef49b6b41256daa93ee, type: 2}
-    amount: 1
-  - ingredient: {fileID: 11400000, guid: 75f72f6f0b8874949a34381f0169261f, type: 2}
-    amount: 1
+  - ingredient: {fileID: 11400000, guid: 7f4b0d2527d5a6b44990b751374404f8, type: 2}
+    amount: 3
   result: {fileID: 11400000, guid: b5edf5537a42faa47b06770231e6f367, type: 2}
   resultAmount: 1
