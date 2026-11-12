@@ -18,13 +18,17 @@ public class FPController : MonoBehaviour
     private Vector3 velocity;
     private float verticalRotation = 0f;
 
+    [Header("Animation")]
+    [SerializeField] private Animator animator;
 
-    
     private void Awake()
     {
         
 
         controller = GetComponent<CharacterController>();
+
+        if (animator == null) animator = GetComponentInChildren<Animator>();
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -65,6 +69,13 @@ public class FPController : MonoBehaviour
         Vector3 move = transform.right * moveInput.x + transform.forward *
         moveInput.y;
         controller.Move(move * moveSpeed * Time.deltaTime);
+
+        if (animator != null)
+        {
+            bool isMoving = moveInput.sqrMagnitude > 0.01f;
+            animator.SetBool("IsWalking", isMoving);
+        }
+
         if (controller.isGrounded && velocity.y < 0)
             velocity.y = -2f;
         velocity.y += gravity * Time.deltaTime;
