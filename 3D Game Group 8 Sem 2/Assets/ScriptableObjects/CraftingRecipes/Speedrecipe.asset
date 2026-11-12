@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Speedrecipe
   m_EditorClassIdentifier: Assembly-CSharp::Recipes
   elements:
-  - ingredient: {fileID: 11400000, guid: fad0b70c227213d46b54feb70b1b08ab, type: 2}
-    amount: 1
   - ingredient: {fileID: 11400000, guid: d8f8d2ca58f30d54ea9901918fa25dd1, type: 2}
     amount: 1
-  - ingredient: {fileID: 11400000, guid: 43604da319818f7429360cd67d6a7746, type: 2}
-    amount: 3
+  - ingredient: {fileID: 11400000, guid: c6ac46deb69bbe14789bcf88afdcc846, type: 2}
+    amount: 1
+  - ingredient: {fileID: 11400000, guid: 75f72f6f0b8874949a34381f0169261f, type: 2}
+    amount: 1
   result: {fileID: 11400000, guid: cd33fd60cea88e341ad31a498f5ed072, type: 2}
   resultAmount: 1

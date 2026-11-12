@@ -22571,18 +22571,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2581830861512080153, guid: 7576c56949f2c92498625b3fcab0eafe, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 2927148244395958691, guid: 7576c56949f2c92498625b3fcab0eafe, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 157.15994
-      objectReference: {fileID: 0}
-    - target: {fileID: 2927148244395958691, guid: 7576c56949f2c92498625b3fcab0eafe, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 157.15994
-      objectReference: {fileID: 0}
     - target: {fileID: 2927148244395958691, guid: 7576c56949f2c92498625b3fcab0eafe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 895.6425
@@ -41604,7 +41592,7 @@ MeshCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 5
   m_Convex: 0
@@ -67246,8 +67234,8 @@ Transform:
   m_GameObject: {fileID: 590436335}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 76.97782, y: -1.9852295, z: -13.745354}
-  m_LocalScale: {x: 174.2246, y: 3.9705372, z: 115.95111}
+  m_LocalPosition: {x: 72.4577, y: -1.9852295, z: 23.2269}
+  m_LocalScale: {x: 165.19273, y: 3.9705372, z: 42.008953}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 384591750}
@@ -78384,18 +78372,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 199315170}
     m_Modifications:
-    - target: {fileID: 5077697653245324299, guid: 02f0845fb4ac7f147bbbd636949f2a80, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5082761
-      objectReference: {fileID: 0}
-    - target: {fileID: 5077697653245324299, guid: 02f0845fb4ac7f147bbbd636949f2a80, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5082761
-      objectReference: {fileID: 0}
-    - target: {fileID: 5077697653245324299, guid: 02f0845fb4ac7f147bbbd636949f2a80, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5082761
-      objectReference: {fileID: 0}
     - target: {fileID: 5077697653245324299, guid: 02f0845fb4ac7f147bbbd636949f2a80, type: 3}
       propertyPath: m_LocalPosition.x
       value: 594.76996
@@ -109539,18 +109515,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 199315170}
     m_Modifications:
     - target: {fileID: 5077697653245324299, guid: 02f0845fb4ac7f147bbbd636949f2a80, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5082761
-      objectReference: {fileID: 0}
-    - target: {fileID: 5077697653245324299, guid: 02f0845fb4ac7f147bbbd636949f2a80, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5082761
-      objectReference: {fileID: 0}
-    - target: {fileID: 5077697653245324299, guid: 02f0845fb4ac7f147bbbd636949f2a80, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5082761
-      objectReference: {fileID: 0}
-    - target: {fileID: 5077697653245324299, guid: 02f0845fb4ac7f147bbbd636949f2a80, type: 3}
       propertyPath: m_LocalPosition.x
       value: 597.17
       objectReference: {fileID: 0}
@@ -123933,11 +123897,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44793c453f8ceb478f9b5614f246b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Settings
-  SettingsButton: {fileID: 0}
-  ResumeButton: {fileID: 0}
-  SettingsPanel: {fileID: 0}
-  QuitButton: {fileID: 0}
-  VolumeSlider: {fileID: 0}
 --- !u!1 &1168828446
 GameObject:
   m_ObjectHideFlags: 0
@@ -140688,14 +140647,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 810025476}
     m_Modifications:
-    - target: {fileID: 8522637498151101091, guid: 0848ba806c9447648bcb6e053c4d17b9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 11.610998
-      objectReference: {fileID: 0}
-    - target: {fileID: 8522637498151101091, guid: 0848ba806c9447648bcb6e053c4d17b9, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 11.610998
-      objectReference: {fileID: 0}
     - target: {fileID: 8522637498151101091, guid: 0848ba806c9447648bcb6e053c4d17b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 841.7
@@ -158987,7 +158938,7 @@ Transform:
   m_GameObject: {fileID: 1640623030}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.82, y: 6.52967, z: 7.81}
+  m_LocalPosition: {x: -2.92, y: 6.52967, z: 7.77}
   m_LocalScale: {x: 0.579806, y: 1.7453487, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -168111,7 +168062,7 @@ Transform:
   m_GameObject: {fileID: 1697473982}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.84, y: 6.52967, z: 22}
+  m_LocalPosition: {x: -2.9, y: 6.52967, z: 21.96}
   m_LocalScale: {x: 0.579806, y: 1.7453487, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -184789,6 +184740,7 @@ GameObject:
   - component: {fileID: 1747772598}
   - component: {fileID: 1747772597}
   - component: {fileID: 1747772596}
+  - component: {fileID: 1747772599}
   m_Layer: 0
   m_Name: WindowOne
   m_TagString: Untagged
@@ -184890,6 +184842,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747772594}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1747772599
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747772594}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000001, y: 1.1370904e-12, z: 10.000004}
+  m_Center: {x: 0, y: -0.00012207031, z: 0.0000076293945}
 --- !u!4 &1757238383 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8522637498151101091, guid: 0848ba806c9447648bcb6e053c4d17b9, type: 3}
@@ -185295,7 +185268,7 @@ Transform:
   m_GameObject: {fileID: 1767351644}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.81, y: 6.52967, z: 0.46}
+  m_LocalPosition: {x: -2.93, y: 6.52967, z: 0.42}
   m_LocalScale: {x: 0.579806, y: 1.7453487, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -203720,7 +203693,7 @@ Transform:
   m_GameObject: {fileID: 1966615832}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.83, y: 6.52967, z: 14.9}
+  m_LocalPosition: {x: -2.91, y: 6.52967, z: 14.86}
   m_LocalScale: {x: 0.579806, y: 1.7453487, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -230223,7 +230196,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: To craft, TAB by the Culdron
+  m_text: To craft, TAB by the Cauldron
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fcd57d3a37b4c714a964012e62aec25d, type: 2}
   m_sharedMaterial: {fileID: -7088660455160512113, guid: fcd57d3a37b4c714a964012e62aec25d, type: 2}
@@ -233522,7 +233495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7294118}
+  m_Color: {r: 0.3018868, g: 0.15884724, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -235059,7 +235032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7294118}
+  m_Color: {r: 0.28930807, g: 0.14187187, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -235248,7 +235221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7294118}
+  m_Color: {r: 0.2901961, g: 0.14509805, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
