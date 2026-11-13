@@ -4,6 +4,8 @@ using UnityEngine;
 public class Crafting : MonoBehaviour
 {
     private readonly HashSet<Collider> playersInRange = new();
+    public FPController FPControllerScript;
+    private bool isPaused;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -11,6 +13,13 @@ public class Crafting : MonoBehaviour
             playersInRange.Add(other) && playersInRange.Count == 1)
         {
             Inventory2.instance?.SetCauldronInRange(true);
+        }
+
+        isPaused = true;
+        // Disable mouse look script
+        if (FPControllerScript != null)
+        {
+            FPControllerScript.enabled = false;
         }
     }
 
