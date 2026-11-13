@@ -151,28 +151,32 @@ public class TutorialDirector : MonoBehaviour
 
         // ---- 6. CRAFTING LESSON ----
         Step("6: Crafting Lesson");
-        yield return Dlg.Say("Tuna", "Great! Those are some high quality ingredients. Now we can try and craft a potion!");
+        yield return Dlg.Say("Tuna", "Nice find! Those are perfect. Now we can try and craft a potion!");
         Dlg.Hide();
         yield return tuna.GoTo(cauldronSpot);
+
+        Crafting.CanOpenCrafting = true;
 
         if (!skipCraftingLesson)
         {
             Highlight(cauldronHighlight, true);
-            Ui.SetHint("Approach the cauldron to craft. Press TAB to reopen the menu.");
-            yield return new WaitUntil(InventoryOpen);
+            Ui.SetHint("Walk up to the cauldron or press TAB");
+
+            // Wait until the player is close enough to trigger the cauldron or opens the inventory manually
+            yield return new WaitUntil(() => Inventory2.instance != null && Inventory2.instance.IsOpen);
             Highlight(cauldronHighlight, false);
 
-            Ui.SetHint("Click a potion recipe to craft your first potion.");
-            yield return new WaitUntil(() => potionCrafted);
+            Ui.SetHint("Click the ingredients to craft your first potion");
 
-            Ui.SetHint("Nice! Press TAB again to close the menu");
-            yield return new WaitUntil(() => !InventoryOpen());
+            // Wait until the player closes the inventory/crafting menu after making their potion
+            yield return new WaitUntil(() => Inventory2.instance != null && !Inventory2.instance.IsOpen);
+
             Ui.ClearHint();
         }
 
         // ---- 7. GRIMOIRE REMINDER ----
         Step("7: Grimoire Reminder");
-        yield return Dlg.Say("Tuna", "Now that you've figured out how to craft potions, remember you can check your grimoire any time to see all your recipes!");
+        yield return Dlg.Say("Tuna", "Now that you've learned how to craft potions, remember you can check your grimoire any time to see all your recipes!");
         Dlg.Hide();
 
         // ---- 8. TUNA LEADS TO THE CAVE ----

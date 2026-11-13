@@ -7,8 +7,12 @@ public class Crafting : MonoBehaviour
     public FPController FPControllerScript;
     private bool isPaused;
 
+    public static bool CanOpenCrafting = false;
+
     private void OnTriggerEnter(Collider other)
     {
+        if (!CanOpenCrafting) return;
+
         if (other.GetComponentInParent<FPController>() != null &&
             playersInRange.Add(other) && playersInRange.Count == 1)
         {
