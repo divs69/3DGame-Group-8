@@ -12,6 +12,7 @@ public class FPController : MonoBehaviour
     public Transform cameraTransform;
     public float lookSensitivity = 2f;
     public float verticalLookLimit = 90f;
+
     private CharacterController controller;
     private Vector2 moveInput;
     private Vector2 lookInput;
@@ -55,15 +56,13 @@ public class FPController : MonoBehaviour
         
         { 
             HandleMovement();
-            if (Cursor.lockState == CursorLockMode.Locked)
-                HandleLook();
+            
+           if (Cursor.lockState == CursorLockMode.Locked)HandleLook();
         }  
     }
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-       
-           
     }
     public void OnLook(InputAction.CallbackContext context)
     {
@@ -79,9 +78,8 @@ public class FPController : MonoBehaviour
         {
             bool isMoving = moveInput.sqrMagnitude > 0.01f;
             animator.SetBool("IsWalking", isMoving);
-            // Plays the clip once at 100% volume (1.0f)
-            audioSource.PlayOneShot(PlayerWalkSF, 1.0f);
         }
+
 
         if (controller.isGrounded && velocity.y < 0)
             velocity.y = -2f;
