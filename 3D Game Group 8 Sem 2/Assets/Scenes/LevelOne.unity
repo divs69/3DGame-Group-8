@@ -124320,6 +124320,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44793c453f8ceb478f9b5614f246b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Settings
+  SettingsButton: {fileID: 0}
+  ResumeButton: {fileID: 0}
+  SettingsPanel: {fileID: 0}
+  QuitButton: {fileID: 0}
+  VolumeSlider: {fileID: 0}
 --- !u!1 &1168828446
 GameObject:
   m_ObjectHideFlags: 0
@@ -216944,6 +216949,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3867649169654428354, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
+      propertyPath: PlayerWalkSF
+      value: 
+      objectReference: {fileID: 8300000, guid: 363a1a9b4efbeea4f94c157755cf24ff, type: 3}
     - target: {fileID: 3984478248991745112, guid: da2d64c3691cd8a41af0ff7f2bd8dd41, type: 3}
       propertyPath: m_Name
       value: WorkingPlayer
