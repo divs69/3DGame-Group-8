@@ -21,10 +21,14 @@ public class FPController : MonoBehaviour
     [Header("Animation")]
     [SerializeField] private Animator animator;
 
+    [Header("SFX")]
+    public AudioClip PlayerWalkSF; // udio file here in the Inspector
+    private AudioSource audioSource;
+
     private void Awake()
     {
-        
 
+        audioSource = GetComponent<AudioSource>();
         controller = GetComponent<CharacterController>();
 
         if (animator == null) animator = GetComponentInChildren<Animator>();
@@ -59,6 +63,8 @@ public class FPController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+        // Plays the clip once at 100% volume (1.0f)
+        audioSource.PlayOneShot(PlayerWalkSF, 1.0f);
     }
     public void OnLook(InputAction.CallbackContext context)
     {
