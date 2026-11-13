@@ -57,14 +57,13 @@ public class FPController : MonoBehaviour
             HandleMovement();
             if (Cursor.lockState == CursorLockMode.Locked)
                 HandleLook();
-
         }  
     }
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-        // Plays the clip once at 100% volume (1.0f)
-        audioSource.PlayOneShot(PlayerWalkSF, 1.0f);
+       
+           
     }
     public void OnLook(InputAction.CallbackContext context)
     {
@@ -80,6 +79,8 @@ public class FPController : MonoBehaviour
         {
             bool isMoving = moveInput.sqrMagnitude > 0.01f;
             animator.SetBool("IsWalking", isMoving);
+            // Plays the clip once at 100% volume (1.0f)
+            audioSource.PlayOneShot(PlayerWalkSF, 1.0f);
         }
 
         if (controller.isGrounded && velocity.y < 0)
