@@ -15685,8 +15685,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 40.37, y: -0.00017855}
-  m_SizeDelta: {x: 48.34876, y: 17.002}
+  m_AnchoredPosition: {x: 43.723, y: 2.3}
+  m_SizeDelta: {x: 55.05469, y: 14.73302}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &96496004
 MonoBehaviour:
@@ -17756,7 +17756,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 41.035, y: -5.5}
+  m_AnchoredPosition: {x: 41.035, y: 0.00000095367}
   m_SizeDelta: {x: 49.67823, y: 7.74282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &149400643
@@ -17779,11 +17779,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Green Goo
-
-    *Repel the foulest of creatures with one simple potion.
-
-'
+  m_text: 'Ingredients: x1 Stange glowing Fungus?  x2 Blue Glowing Crystal, x2 Purple
+    Glowing Crystal '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aeacfde332a6c104093e627f68d376a4, type: 2}
   m_sharedMaterial: {fileID: -4839972834652617491, guid: aeacfde332a6c104093e627f68d376a4, type: 2}
@@ -17810,8 +17807,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2.5
-  m_fontSizeBase: 2.5
+  m_fontSize: 4
+  m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -125442,8 +125439,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -42.3, y: -7.5}
-  m_SizeDelta: {x: 49.67823, y: 7.74282}
+  m_AnchoredPosition: {x: -41.09098, y: -3.7023122}
+  m_SizeDelta: {x: 52.097, y: 5.68993}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1185633030
 MonoBehaviour:
@@ -125465,11 +125462,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Green Goo
-
-    *Repel the foulest of creatures with one simple potion.
-
-'
+  m_text: 'Ingredients: x2 Magical Flowers and x2 Glowing Crystal  '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aeacfde332a6c104093e627f68d376a4, type: 2}
   m_sharedMaterial: {fileID: -4839972834652617491, guid: aeacfde332a6c104093e627f68d376a4, type: 2}
@@ -125496,8 +125489,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2.5
-  m_fontSizeBase: 2.5
+  m_fontSize: 4
+  m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -161814,7 +161807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 41.8, y: -3.8714}
+  m_AnchoredPosition: {x: 41.8, y: -4.6346}
   m_SizeDelta: {x: 49.67823, y: 7.74282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1645400628
@@ -161837,11 +161830,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Green Goo
-
-    *Repel the foulest of creatures with one simple potion.
-
-'
+  m_text: 'Ingredients: x3 Magical Flowers'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aeacfde332a6c104093e627f68d376a4, type: 2}
   m_sharedMaterial: {fileID: -4839972834652617491, guid: aeacfde332a6c104093e627f68d376a4, type: 2}
@@ -161868,8 +161857,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2.5
-  m_fontSizeBase: 2.5
+  m_fontSize: 4
+  m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -195519,7 +195508,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -39.7, y: 1.7}
+  m_AnchoredPosition: {x: -39.7, y: 2.7313}
   m_SizeDelta: {x: 49.31508, y: 8.97732}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1827416288
@@ -232795,7 +232784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &3789839501779652100
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -236086,7 +236075,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23.044, y: -20.749}
+  m_AnchoredPosition: {x: -25.844, y: -23.2}
   m_SizeDelta: {x: 30.3309, y: 17.012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7451509462595275013
@@ -236740,7 +236729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8081674280866953459
 RectTransform:
   m_ObjectHideFlags: 0
@@ -236779,7 +236768,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22.8, y: 12.6}
+  m_AnchoredPosition: {x: -25.6, y: 13.544}
   m_SizeDelta: {x: 30.81987, y: 17.00236}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8096184702286643428
