@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 14.649462, y: 14.649462, z: 14.649462}
+  m_LocalScale: {x: 13.727562, y: 13.727562, z: 13.727562}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -132,6 +132,7 @@ MonoBehaviour:
   agent: {fileID: 39927733024100057}
   range: 500
   centrePoint: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!195 &39927733024100057
 NavMeshAgent:
   m_ObjectHideFlags: 0

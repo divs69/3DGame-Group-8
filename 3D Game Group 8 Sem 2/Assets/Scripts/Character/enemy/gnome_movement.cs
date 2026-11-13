@@ -12,9 +12,18 @@ public class gnome_movement : MonoBehaviour
     public Transform centrePoint; //centre of the area the agent wants to move around in
     //instead of centrePoint you can set it as the transform of the agent if you don't care about a specific area
 
+    [Header("Animation")]
+    [SerializeField] private Animator animator;
+    private CharacterController controller;
+    private Vector2 moveInput;
+
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        controller = GetComponent<CharacterController>();
+
+        if (animator == null) animator = GetComponentInChildren<Animator>();
     }
 
 
@@ -28,6 +37,11 @@ public class gnome_movement : MonoBehaviour
                 Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f); //so you can see with gizmos
                 agent.SetDestination(point);
             }
+        }
+        if (animator != null)
+        {
+            bool isMoving = moveInput.sqrMagnitude > 0.01f;
+            animator.SetBool("IsWalking", isMoving);
         }
 
     }
