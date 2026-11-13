@@ -177,22 +177,24 @@ public class TutorialDirector : MonoBehaviour
 
         // ---- 8. TUNA LEADS TO THE CAVE ----
         Step("8: Tuna Leads To The Cave");
-        yield return Dlg.Say("Tuna", "Alrighty. Now that you know how to collect stuff and make potions, there's something I want to show you...");
+        yield return Dlg.Say("Tuna", "Alrighty. Now that you know how to collect stuff and make potions. I think you're ready to explore the cave!");
+        yield return Dlg.Say("Tuna", "I would go with you, but they don't like me. The Gnomes i mean...");
+        yield return Dlg.Say("Tuna", "But Good Luck!");
         Dlg.Hide();
         yield return tuna.LeadAlong(caveRoute);
 
         // ---- 9. THE CAVE ----
-        Step("9: The Cave");
+        //Step("9: The Cave");
         TutorialEvents.TutorialCompleted = true;   // remembered even after the cave scene loads
         if (caveEntrance != null) caveEntrance.enabled = true;
-        yield return Dlg.Say("Tuna", "This here is the cave. I wont be joining you past this point... I'm too scared. ");
-        yield return Dlg.Say("Tuna", "Go on in and see what you can find. Goodluck.");
-        Dlg.Hide();
-        Ui.SetHint("Enter the cave");
+        //yield return Dlg.Say("Tuna", "This here is the cave. I wont be joining you past this point... I'm too scared. ");
+        //yield return Dlg.Say("Tuna", "Go on in and see what you can find. Goodluck.");
+        //Dlg.Hide();
+        //Ui.SetHint("Enter the cave");
 
-        yield return new WaitForSeconds(6f);
-        Ui.ClearHint();
-        Debug.Log("Tutorial complete!");
+        //yield return new WaitForSeconds(6f);
+        //Ui.ClearHint();
+        //Debug.Log("Tutorial complete!");
     }
 
     void Update()
@@ -243,11 +245,11 @@ public class TutorialDirector : MonoBehaviour
         ok &= Need(forestSpot, "Forest Spot marker");
         ok &= Need(insideSpot, "Inside Spot marker");
         ok &= Need(cauldronSpot, "Cauldron Spot marker");
-        if (caveRoute == null || caveRoute.Length == 0)
-        {
-            Debug.LogError("[Tutorial] Missing: Cave Route (set its Size and drag in the points)");
-            ok = false;
-        }
+        //if (caveRoute == null || caveRoute.Length == 0)
+        //{
+        //    Debug.LogError("[Tutorial] Missing: Cave Route (set its Size and drag in the points)");
+        //    ok = false;
+        //}
         return ok;
     }
 
