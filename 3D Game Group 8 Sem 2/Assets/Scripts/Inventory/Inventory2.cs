@@ -9,6 +9,8 @@ using UnityEngine.EventSystems;
 public class Inventory2 : MonoBehaviour
 {
     public static Inventory2 instance;
+    private bool isPaused;
+    public FPController FPControllerScript;
 
     //objects in game world. collectables 
     public IngredientData MushroomItem;
@@ -17,6 +19,7 @@ public class Inventory2 : MonoBehaviour
     public IngredientData FlowerItem;
     public IngredientData Flower1Item;
     public IngredientData FungusItem;
+    public IngredientData Eyeballs;
     public IngredientData SpeedpotiongreenItem;
     public IngredientData ReachpotionblueItem;
     public IngredientData JumppotionpinkItem;
@@ -117,6 +120,20 @@ public class Inventory2 : MonoBehaviour
         craftingMenu.SetActive(open && nearCauldron);
         Cursor.lockState = open ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = open;
+
+        isPaused = true;
+
+        // Disable mouse look script
+        if (FPControllerScript != null)
+        {
+            FPControllerScript.enabled = false;
+        }
+
+       
+        
+            
+        
+
     }
 
     public void SetCauldronInRange(bool inRange)

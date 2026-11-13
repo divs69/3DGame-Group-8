@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: eyeball
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   itemName: Eyeball
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: -1859387633, guid: cf7ab58e51d815c43ba2499f7b5a13cb, type: 3}
   description: " The Gnome are a bit messy. \nthey like to keep the eyes of the past
     friends"
   itemPrefab: {fileID: 0}
